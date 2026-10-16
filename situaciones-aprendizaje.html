@@ -1,0 +1,1210 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Situaciones de aprendizaje para enseñar la Historia de Canarias: 81 propuestas de aula para Educación Primaria elaboradas por el alumnado de Didáctica de las Ciencias Sociales I (Universidad de La Laguna).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230E151A'/><path d='M9 21 16 9l7 12' fill='none' stroke='%23EDEBE2' stroke-opacity='.45' stroke-width='1.2'/><circle cx='9' cy='21' r='2' fill='%2384ABF0'/><circle cx='23' cy='21' r='2' fill='%23EA7584'/><path d='M16 4.5l1.6 4.9 4.9 1.6-4.9 1.6L16 17.5l-1.6-4.9L9.5 11l4.9-1.6z' fill='%23F6E7C1'/></svg>">
+<meta name="theme-color" content="#FBFBF9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15191C" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Situaciones de aprendizaje para enseñar la Historia de Canarias">
+<meta property="og:description" content="Situaciones de aprendizaje para enseñar la Historia de Canarias: 81 propuestas de aula para Educación Primaria elaboradas por el alumnado de Didáctica de las Ciencias Sociales I (Universidad de La Laguna).">
+<link rel="canonical" href="https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/situaciones-aprendizaje.html">
+<meta property="og:url" content="https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/situaciones-aprendizaje.html">
+<meta property="og:image" content="https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/social-situaciones.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Situaciones de aprendizaje · Historia de Canarias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,400&amp;display=swap">
+<style>
+@view-transition { navigation: auto }  /* paso suave entre la portada y las dos obras */
+/* Cal y basalto, como los 100 momentos: fondo de cal, tinta de basalto y diez pigmentos que nombran los periodos.
+   Detrás, una carta celeste: la constelación de temas gira a la derecha de la portada y cada situación es una estrella
+   a la que se viaja al abrirla. De noche (modo oscuro del sistema) la carta se vuelve cielo. */
+:root {
+  --bg: #FBFBF9; --surface: #FFFFFF; --card: rgba(255, 255, 255, .92); --ink: #1D2327; --muted: #5C666D; --line: #D8DCD9;
+  --sky: #FBFBF9; --fondo: #FBFBF9; --star: #1D2327; --chalk: #1D2327;
+  --mesa: #E8EAE7; --paper: #FFFFFF; --paper-line: #C4CACD; --paper-muted: #6A7379; --shadow: rgba(29, 35, 39, .22);
+  /* picón, drago, atlántico, ocre, cochinilla, platanera, plomo, añil, malva, basalto */
+  --e1: #8C4A2B; --e2: #9B1B30; --e3: #17607A; --e4: #86610E; --e5: #B0245C;
+  --e6: #3F7A35; --e7: #4A535C; --e8: #2B55A6; --e9: #6D4BA3; --e10: #23292E;
+  --on-era: #FFFFFF; --tint: 6%;
+  --f-display: 'Ibarra Real Nova', 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  --f-text: Archivo, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15191C; --surface: #1E2428; --card: rgba(26, 32, 36, .9); --ink: #ECEEEA; --muted: #9AA3A8; --line: #323B41;
+    --sky: #15191C; --fondo: #15191C; --star: #F6E7C1; --chalk: #EDEBE2;
+    --mesa: #0D1012; --shadow: rgba(0, 0, 0, .6);
+    --e1: #D99B72; --e2: #EA7584; --e3: #63B7CE; --e4: #D9B454; --e5: #EF79A8;
+    --e6: #8FCB81; --e7: #A9B3BC; --e8: #84ABF0; --e9: #BBA1EA; --e10: #D3D9DD;
+    --on-era: #15191C; --tint: 9%;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 4.5rem; background: var(--fondo) }
+[hidden] { display: none !important }
+body { margin: 0; background: transparent; color: var(--ink); font: 400 1rem/1.5 var(--f-text); -webkit-font-smoothing: antialiased }
+html.sheet-open, html.sheet-open body { overflow: hidden }
+/* el cielo, detrás de todo; la página, encima; el destello, entre la página y el pliego */
+#cielo { position: fixed; inset: 0; z-index: 0; width: 100%; height: 100%; display: block; pointer-events: none }
+#app { position: relative; z-index: 1; transition: opacity .45s ease, transform .6s cubic-bezier(.3, 0, .2, 1), filter .45s ease }
+html.viajando #app { opacity: 0; transform: scale(.97); filter: blur(3px); pointer-events: none }
+/* la luz de la estrella: un velo tenue que acaba en el tono de la mesa del pliego, para que este aparezca sin fogonazo */
+#destello { position: fixed; inset: 0; z-index: 45; pointer-events: none; opacity: 0; transform: scale(.4);
+  background: radial-gradient(circle closest-side at 50% 50%,
+    color-mix(in oklab, var(--c, var(--star)) 34%, var(--mesa)) 0,
+    color-mix(in oklab, var(--c, var(--star)) 20%, var(--mesa)) 12%,
+    color-mix(in oklab, var(--c, var(--star)) 9%, var(--mesa)) 35%,
+    var(--mesa) 70%, color-mix(in oklab, var(--mesa) 0%, transparent) 100%);
+  transition: opacity .6s cubic-bezier(.25, .6, .3, 1), transform .9s cubic-bezier(.25, .6, .3, 1) }
+#destello.on { opacity: 1; transform: scale(4.5) }
+#destello.fijo { transition: none }
+.fondo-pausa { position: fixed; right: max(.9rem, env(safe-area-inset-right, 0px)); bottom: max(.9rem, env(safe-area-inset-bottom, 0px)); z-index: 30; opacity: .6; color: var(--ink); background: var(--surface); border-color: var(--line); transition: opacity .2s }
+.fondo-pausa:hover, .fondo-pausa:focus-visible { opacity: 1 }
+#fondo-pausa[data-on="true"] .i-play, #fondo-pausa[data-on="false"] .i-pause { display: none }
+html.viajando .fondo-pausa, html.sheet-open .fondo-pausa { opacity: 0; pointer-events: none }
+.fondo-pausa .lbl { display: none }
+html.calma .fondo-pausa { display: inline-flex; align-items: center; gap: .45rem; width: auto; padding: 0 .85rem 0 .65rem; border-radius: 999px; opacity: .9 }
+html.calma .fondo-pausa .lbl { display: inline; font: 500 .8rem/1 var(--f-text); white-space: nowrap }
+a { color: inherit }
+button { font: inherit; color: inherit }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap }
+.skip { position: absolute; left: var(--gutter); top: -4rem; z-index: 60; background: var(--ink); color: var(--bg); padding: .5rem .8rem; border-radius: 4px }
+.skip:focus { top: .5rem }
+.e1 { --c: var(--e1) } .e2 { --c: var(--e2) } .e3 { --c: var(--e3) } .e4 { --c: var(--e4) } .e5 { --c: var(--e5) }
+.e6 { --c: var(--e6) } .e7 { --c: var(--e7) } .e8 { --c: var(--e8) } .e9 { --c: var(--e9) } .e10 { --c: var(--e10) }
+
+/* ── barra ── */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; display: flex; align-items: center; gap: 1.5rem;
+  padding: .5rem var(--gutter); background: color-mix(in oklab, var(--bg) 88%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 2px solid var(--e1);
+}
+.obras { display: flex; align-items: baseline; gap: .55rem; min-width: 0; font: 400 1.18rem/1.1 var(--f-display); white-space: nowrap }
+.obras a { text-decoration: none; color: var(--muted) }
+.obras a:hover { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .22em }
+.obras a[aria-current] { font-weight: 500; color: var(--ink) }
+.obras i { font-style: normal; color: var(--line) }
+.obras .c { display: none }
+.tnav { display: flex; gap: 1.25rem; font-size: .9rem }
+.tnav a { text-decoration: none; color: var(--muted); white-space: nowrap }
+.tnav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: .25em }
+.search { margin-left: auto; position: relative; flex: 0 1 19rem; min-width: 0 }
+.search svg { position: absolute; left: .7rem; top: 50%; translate: 0 -50%; width: .95rem; height: .95rem; color: var(--muted); pointer-events: none }
+.search input { width: 100%; font: inherit; font-size: .9rem; padding: .42rem .8rem .42rem 2.1rem; color: var(--ink); border: 1px solid var(--line); border-radius: 4px; background: var(--surface) }
+.search input::placeholder { color: var(--muted) }
+@media (max-width: 1099px) { .tnav { display: none } }
+@media (max-width: 620px) { .obras { flex: none; font-size: 1.02rem; gap: .4rem } .obras .l { display: none } .obras .c { display: inline } .top { gap: .7rem } .search { flex: 1 1 5.5rem } }
+@media (max-width: 760px) { .fondo-pausa { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 4.2rem); bottom: auto; right: .75rem } }
+
+/* ── portada: el texto a la izquierda, como en los 100 momentos; a la derecha gira la constelación ── */
+.hero { padding: calc(min(49vw, 400px) + 1.5rem) var(--gutter) clamp(1.5rem, 3vw, 2.25rem) }
+.hero > div { position: relative; max-width: 44rem; margin: 0 auto; text-align: center }
+.hero .lede, .hero .doclinks { margin-inline: auto }
+.hero .ruta { justify-content: center }
+.kicker { margin: 0 0 .75rem; font: 600 .74rem/1.4 var(--f-text); letter-spacing: .09em; text-transform: uppercase; color: var(--muted) }
+h1 { margin: 0; font: 400 clamp(2.4rem, 5vw, 4rem)/1 var(--f-display); letter-spacing: -.01em; text-wrap: balance }
+h1 .resto { display: block; margin-top: .35rem; font: italic 400 clamp(1.25rem, 2.3vw, 1.75rem)/1.15 var(--f-display); letter-spacing: 0; color: var(--muted) }
+.lede { max-width: 36rem; margin: 1.1rem 0 0; font: 400 1.2rem/1.45 var(--f-display); text-wrap: pretty }
+.ruta { margin: 1.4rem 0 0; padding: 0; list-style: none; counter-reset: paso; display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; font-size: .88rem; color: var(--muted) }
+.ruta li { counter-increment: paso; white-space: nowrap }
+.ruta li::before { content: counter(paso, decimal-leading-zero) " "; font: italic 400 1rem/1 var(--f-display); color: var(--ink) }
+.ruta b { font-weight: 500; color: var(--ink) }
+.doclinks { max-width: 36rem; margin: 1rem 0 0; font-size: .9rem; color: var(--muted) }
+.doclinks a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: .22em }
+.doclinks a:hover { text-decoration-color: var(--ink) }
+
+/* botón redondo sobre fondo oscuro (la pausa de la constelación) */
+.pz-btn { appearance: none; cursor: pointer; width: 2rem; height: 2rem; display: grid; place-items: center; padding: 0; border: 1px solid color-mix(in oklab, var(--chalk) 40%, transparent); border-radius: 50%; background: transparent; color: var(--chalk); font-size: .95rem; line-height: 1 }
+.pz-btn:hover { background: color-mix(in oklab, var(--chalk) 14%, transparent) }
+.pz-btn:focus-visible { outline-color: var(--chalk) }
+.pz-btn svg, .tb svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round }
+.pz-btn svg .f { fill: currentColor; stroke-width: 1.2 }
+
+/* ── secciones ── */
+.sec { padding: clamp(2rem, 4.5vw, 3.5rem) var(--gutter) 0 }
+.sec > h2 { margin: 0 0 .45rem; font: 400 clamp(1.8rem, 3.3vw, 2.5rem)/1.05 var(--f-display); text-wrap: balance }
+.sub { max-width: 42rem; margin: 0 0 1.3rem; color: var(--muted); text-wrap: pretty }
+.cen { text-align: center }
+/* el recuadro de la matriz: se lee sobre la constelación sin perderla de vista */
+.panel { max-width: 64rem; margin: 0 auto; padding: clamp(1.4rem, 3.5vw, 2.6rem) clamp(1rem, 3.5vw, 2.75rem) clamp(1rem, 2.5vw, 1.75rem);
+  background: color-mix(in oklab, var(--e1) var(--tint), var(--bg)); border: 0; border-top: 4px solid var(--e1); border-radius: 0 0 6px 6px; }
+.panel > h2 { margin: 0 0 1.15rem; font: 400 clamp(1.8rem, 3.3vw, 2.5rem)/1.05 var(--f-display); text-wrap: balance }
+@media (max-width: 560px) { .panel { margin-inline: calc(var(--gutter) * -.5); padding-inline: .75rem } }
+.cen .sub { margin-inline: auto }
+
+/* ── catálogo ── */
+.filtros { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .55rem 1.1rem; align-items: baseline; margin-bottom: .6rem }
+.filtros .lbl { font: 600 .74rem/1.2 var(--f-text); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: .55rem }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem }
+.chip { appearance: none; cursor: pointer; display: inline-flex; align-items: baseline; gap: .4rem; padding: .36rem .6rem; border: 1px solid var(--line); border-radius: 4px; background: var(--card); font: 500 .84rem/1.1 var(--f-text); transition: background-color .18s, border-color .18s, color .18s }
+.chip:hover { border-color: var(--ink) }
+.chip .k { font-weight: 400; font-size: .76rem; color: var(--muted); font-variant-numeric: tabular-nums }
+.chip.per { border-left: 4px solid var(--c) }
+.chip.per .r { font: 500 1rem/1 var(--f-display); color: var(--c) }
+.chip.per:hover { border-color: var(--c) }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg) }
+.chip.per[aria-pressed="true"] { background: var(--c); border-color: var(--c); color: var(--on-era) }
+.chip[aria-pressed="true"] .k, .chip.per[aria-pressed="true"] .r { color: inherit }
+.chip:disabled { opacity: .35; cursor: default }
+@media (max-width: 640px) { .filtros { grid-template-columns: minmax(0, 1fr) } .filtros .lbl { padding-top: .4rem } .chip.per .l { display: none } }
+.res { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .8rem; min-height: 2rem; margin: 0 0 .6rem; font-size: .92rem; color: var(--muted) }
+.res b { color: var(--ink); font-weight: 600 }
+.res button { appearance: none; cursor: pointer; border: 1px solid var(--line); background: var(--surface); border-radius: 4px; padding: .25rem .65rem; font-size: .82rem }
+.res button:hover { border-color: var(--ink) }
+.res:empty { display: none }
+
+/* ── la matriz, la misma que en los 100 momentos ── */
+.filtros-box { max-width: 58rem; margin: 0 auto 1rem; text-align: left }
+.filtros { margin: 0 }
+.filtros-box > summary { display: block; width: max-content; max-width: 100%; margin: 0 auto; cursor: pointer; list-style: none; padding: .45rem .9rem; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); font: 500 .88rem/1.2 var(--f-text) }
+.filtros-box > summary:hover { border-color: var(--ink) }
+.filtros-box > summary::-webkit-details-marker { display: none }
+.filtros-box > summary::after { content: " +"; color: var(--muted) }
+.filtros-box[open] > summary::after { content: " −" }
+.filtros-box[open] .filtros { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--line) }
+.filtros-box.activos > summary { border-color: var(--ink); background: var(--ink); color: var(--bg) }
+.filtros-box.activos > summary::after { color: inherit }
+.res { justify-content: center }
+.mx { --lab: 11rem; display: grid; gap: 3px; max-width: 58rem; margin: 0 auto; text-align: left }
+.mx-row { display: grid; grid-template-columns: var(--lab) repeat(10, minmax(0, 1fr)); gap: 3px; align-items: center; padding-right: calc(var(--lab) + 3px) }
+.lab { display: flex; align-items: baseline; gap: .45rem; min-width: 0; font-size: .82rem; line-height: 1.2; color: var(--muted) }
+.lab b { flex: none; min-width: 1.9rem; font: 500 1.1rem/1 var(--f-display); color: var(--c) }
+.cell { aspect-ratio: 1; display: grid; place-items: center; text-decoration: none; font: 500 .82rem/1 var(--f-text); font-variant-numeric: tabular-nums; background: var(--c); color: var(--on-era); transition: scale .15s, opacity .25s }
+.cell.vacia { background: transparent; color: color-mix(in oklab, var(--c) 45%, transparent); border: 1px dashed color-mix(in oklab, var(--c) 40%, transparent); cursor: default }
+a.cell:hover, a.cell:focus-visible { scale: 1.12; position: relative; z-index: 1 }
+.mx.focus .cell:not(.on) { opacity: .16 }
+.cell.pulse { animation: pulse 1.1s ease }
+@keyframes pulse { 30% { box-shadow: 0 0 0 4px color-mix(in oklab, var(--c) 40%, transparent) } }
+.mx-cap { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto auto 1fr; column-gap: 1.1rem; align-items: start; height: 8.6rem; max-width: 44rem; margin: .6rem auto 1.2rem; padding: .8rem 1.1rem; border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 6px; background: var(--bg); text-align: left; font-size: .9rem; color: var(--muted); overflow: hidden }
+.mx-cap .n { grid-row: 1 / -1; align-self: center; min-width: 2.6ch; font: 400 3.6rem/.9 var(--f-display); color: var(--c); text-align: center }
+.mx-cap .p { font: 600 .66rem/1.3 var(--f-text); letter-spacing: .1em; text-transform: uppercase }
+.mx-cap .t { margin-top: .1rem; font: 500 1.18rem/1.2 var(--f-display); color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.mx-cap .q { margin-top: .1rem; font: italic 400 1rem/1.3 var(--f-display); color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.mx-cap .a { margin-top: .2rem; font-size: .82rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.mx-cap.vacio { display: flex; align-items: center; justify-content: center; text-align: center; border-left-width: 1px; border-style: dashed; background: transparent }
+.mx-cap .h { font-size: .92rem }
+@media (max-width: 560px) { .mx-cap { height: 7.6rem; padding: .6rem .7rem; column-gap: .7rem } .mx-cap .n { font-size: 2.6rem } .mx-cap .t { font-size: 1.02rem; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical } .mx-cap .q { display: none } }
+@media (max-width: 760px) { .mx { --lab: 2.5rem } .lab span { display: none } .lab b { font-size: 1rem } .cell { font-size: .68rem } }
+
+/* ── autoría y colección ── */
+.au { columns: 17rem; column-gap: 2.25rem; max-width: 76rem; margin: 1.3rem auto 0; text-align: left; padding: 0; list-style: none }
+.au li { break-inside: avoid }
+.au a { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); column-gap: .5rem; padding: .42rem 0; border-top: 1px solid var(--line); text-decoration: none }
+.au a:hover .a { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: .2em }
+.au .n { grid-row: span 2; font: 400 1.35rem/1.05 var(--f-display); color: var(--c) }
+.au .a { font: 500 1.02rem/1.25 var(--f-display) }
+.au .a i { font-style: normal; font-size: .82em; color: var(--muted) }
+.au .t { font-size: .8rem; line-height: 1.3; color: var(--muted) }
+.chip.tema::before { content: ""; align-self: center; width: .72rem; height: .72rem; background: var(--ink); clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%); transition: transform .3s ease }
+.chip.tema:hover::before, .chip.tema[aria-pressed="true"]::before { transform: scale(1.25) }
+.chip.tema[aria-pressed="true"]::before { background: var(--bg) }
+.obra { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 1.5rem clamp(2rem, 5vw, 5rem); align-items: start; max-width: 72rem; margin: 1rem auto 0; text-align: left }
+.obra h3 { margin: 1.5rem 0 .35rem; font: 600 .86rem/1.3 var(--f-text); color: var(--muted) }
+.obra h3:first-child { margin-top: 0 }
+.abs { margin: 0; max-width: 41rem; font: 400 1.2rem/1.45 var(--f-display); text-wrap: pretty }
+.kw { margin: 0; max-width: 41rem; font-size: .95rem }
+.cite { margin: 0; max-width: 41rem; padding-left: 1.6rem; text-indent: -1.6rem; font: 400 1.1rem/1.4 var(--f-display); overflow-wrap: anywhere }
+.copy { appearance: none; cursor: pointer; margin-top: .65rem; padding: .42rem .7rem; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); font: 500 .82rem/1 var(--f-text) }
+.copy:hover { border-color: var(--ink) }
+.mini { margin: .7rem 0 0; max-width: 41rem; font-size: .86rem; color: var(--muted) }
+.ficha { margin: 0; border-top: 2px solid var(--ink) }
+.ficha div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: .75rem; padding: .6rem 0; border-bottom: 1px solid var(--line) }
+.ficha dt { font-size: .84rem; line-height: 1.5; color: var(--muted) }
+.ficha dd { margin: 0; font: 500 1.1rem/1.3 var(--f-display) }
+.ficha a { text-decoration-color: var(--muted); text-underline-offset: .2em }
+@media (max-width: 860px) { .obra { grid-template-columns: minmax(0, 1fr) } }
+@media (max-width: 480px) { .ficha div { grid-template-columns: minmax(0, 1fr); gap: .1rem } }
+footer { display: grid; justify-items: center; text-align: center; gap: .55rem; margin-top: clamp(2.5rem, 6vw, 4rem); padding: 1.4rem var(--gutter) 2.5rem; border-top: 1px solid var(--line); font-size: .86rem; line-height: 1.45; color: var(--muted) }
+footer p { margin: 0; max-width: 52rem; text-wrap: balance }
+footer b { font-weight: 500; color: var(--ink) }
+footer a { text-underline-offset: .2em }
+
+/* ── pliego: la situación abierta ── */
+.sheet { position: fixed; inset: 0; z-index: 50; display: grid; grid-template-columns: minmax(17rem, 23rem) minmax(0, 1fr); overflow: hidden; background: var(--mesa); padding-top: env(safe-area-inset-top, 0px) }
+.sheet.enter { animation: sheet-in .5s cubic-bezier(.25, .6, .3, 1) both }
+@keyframes sheet-in { from { opacity: 0; transform: translateY(12px) } }
+.sh-aside { display: flex; flex-direction: column; min-height: 0; overflow-y: auto; padding: 1.1rem 1.6rem 1.4rem; background: var(--c); color: var(--on-era) }
+.sh-aside :focus-visible { outline-color: currentColor }
+.sh-close { appearance: none; align-self: flex-start; cursor: pointer; padding: .45rem .8rem; border-radius: 4px; background: transparent; border: 1px solid color-mix(in oklab, currentColor 50%, transparent); font: 500 .86rem/1 var(--f-text) }
+.sh-close:hover { background: color-mix(in oklab, currentColor 16%, transparent) }
+.sh-per { margin: 1.5rem 0 0; font-size: .86rem; line-height: 1.35 }
+.sh-num { width: max-content; margin: .3rem 0 0; font: 400 clamp(5rem, 9.5vw, 8rem)/.84 var(--f-display) }
+.sh-title { margin: .7rem 0 0; font: 500 clamp(1.5rem, 2.1vw, 1.95rem)/1.12 var(--f-display); text-wrap: balance }
+.sh-by { margin: .5rem 0 0; font-size: .93rem; line-height: 1.35 }
+.sh-box { margin: 1rem 0 0; padding-left: .8rem; border-left: 2px solid color-mix(in oklab, currentColor 55%, transparent) }
+.sh-box .sh-note { margin-top: .3rem; font: 400 .78rem/1.35 var(--f-text); opacity: .8 }
+.sh-box small { display: block; margin-bottom: .2rem; font: 600 .68rem/1.2 var(--f-text); letter-spacing: .08em; text-transform: uppercase; opacity: .85 }
+.sh-box p { margin: 0; font: italic 400 1.1rem/1.3 var(--f-display); text-wrap: pretty }
+.sh-box.prod p { font-style: normal }
+.sh-ce { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem; margin: 1rem 0 0; font-size: .8rem }
+.sh-ce b { font: 600 .68rem/1.2 var(--f-text); letter-spacing: .08em; text-transform: uppercase; opacity: .85; margin-right: .2rem }
+.sh-ce span { padding: .12rem .42rem; border: 1px solid color-mix(in oklab, currentColor 45%, transparent); border-radius: 3px; font-variant-numeric: tabular-nums }
+.sh-cite { margin-top: 1.1rem; font-size: .82rem; line-height: 1.4 }
+.sh-cite summary { width: max-content; max-width: 100%; cursor: pointer; list-style: none; font-size: .86rem; text-decoration: underline; text-underline-offset: .2em; text-decoration-color: color-mix(in oklab, currentColor 55%, transparent) }
+.sh-cite summary::-webkit-details-marker { display: none }
+.sh-cite summary::after { content: " +" }
+.sh-cite[open] summary::after { content: " −" }
+.sh-cite p { margin: .45rem 0 0; font: 400 .98rem/1.4 var(--f-display); overflow-wrap: anywhere }
+.sh-cite .copy { margin-top: .55rem; color: inherit; background: transparent; border-color: color-mix(in oklab, currentColor 50%, transparent) }
+.sh-nav { display: grid; gap: .6rem; margin-top: auto; padding-top: 1.6rem }
+.sh-nav a { display: block; padding-top: .6rem; text-decoration: none; border-top: 1px solid color-mix(in oklab, currentColor 35%, transparent) }
+.sh-nav small { display: block; font-size: .78rem; opacity: .85 }
+.sh-nav span { font: 500 1.05rem/1.2 var(--f-display) }
+.sh-nav a:hover span { text-decoration: underline; text-underline-offset: .2em }
+.sh-main { display: flex; flex-direction: column; min-width: 0; min-height: 0 }
+.sh-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .5rem; padding: .5rem clamp(.75rem, 2vw, 1.5rem); background: var(--surface); border-bottom: 1px solid var(--line); font-size: .86rem }
+.sh-bar .info { margin-right: auto; color: var(--muted); min-width: 0 }
+.tb { appearance: none; cursor: pointer; min-width: 2.1rem; height: 2.1rem; padding: 0 .55rem; display: inline-grid; place-items: center; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); font-size: 1rem; line-height: 1; text-decoration: none }
+.tb:hover { border-color: var(--ink) }
+.sh-doc { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: clamp(.75rem, 2.4vw, 2rem) clamp(.75rem, 2.4vw, 2rem) 3rem }
+.stack { margin: 0 auto; background: var(--paper); box-shadow: 0 1px 2px var(--shadow), 0 18px 34px -22px var(--shadow) }
+.pg { position: relative; margin: 0 }
+.pg.brk { margin-top: .45rem; padding-top: .6rem; border-top: 1px dashed var(--paper-line) }
+.pg.gone { display: none }
+.pg .clip { overflow: hidden }
+.pg:not(.ready) .clip { background: linear-gradient(100deg, var(--paper) 40%, #ECEFEF 50%, var(--paper) 60%) 0 0 / 300% 100%; animation: shimmer 1.3s linear infinite }
+.pg img { display: block; max-width: none; opacity: 0; transition: opacity .3s }
+.pg.ready img { opacity: 1 }
+.pg figcaption { position: absolute; z-index: 1; right: .7rem; top: -.62em; padding: 0 .45rem; background: var(--paper); font-size: .7rem; line-height: 1.2; white-space: nowrap; color: var(--paper-muted) }
+@keyframes shimmer { to { background-position: -150% 0 } }
+@media (max-width: 860px) {
+  .sheet { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) }
+  .sh-aside { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 0 .9rem; padding: .7rem 1rem .8rem; max-height: 48vh }
+  .sh-close { grid-column: 1 / -1; justify-self: start; margin-bottom: .5rem }
+  .sh-per { grid-column: 1 / -1; margin: 0 0 .2rem; font-size: .8rem }
+  .sh-num { grid-row: span 2; margin: 0; font-size: 3.6rem; line-height: .9 }
+  .sh-title { margin: 0; font-size: 1.32rem }
+  .sh-by { margin: .15rem 0 0; font-size: .84rem }
+  .sh-box, .sh-ce, .sh-cite { grid-column: 1 / -1; margin-top: .55rem }
+  .sh-box p { font-size: 1rem }
+  .sh-nav { display: none }
+}
+@media (min-width: 861px) { .tb.mob { display: none } }
+
+html.calma *, html.calma *::before, html.calma *::after { animation: none !important; transition: none !important }
+</style>
+<style>:root{padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","url":"https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/situaciones-aprendizaje.html","name":"Situaciones de aprendizaje para enseñar la Historia de Canarias","inLanguage":"es","datePublished":"2026","abstract":"Colección de situaciones de aprendizaje elaboradas por el alumnado de la asignatura. Cada propuesta lleva un contenido de Historia de Canarias al aula de Primaria con una pregunta guía, una secuencia de sesiones basada en la indagación, las fuentes y el trabajo cooperativo, un producto final y su evaluación. La edición docente unificó la estructura y las referencias curriculares conservando el núcleo de cada propuesta, y las presenta como materiales que cada docente puede adaptar a su centro, a su municipio y a su grupo.","keywords":["situaciones de aprendizaje","Historia de Canarias","Educación Primaria","Didáctica de las Ciencias Sociales","LOMLOE"],"learningResourceType":"Situación de aprendizaje","educationalLevel":"Educación Primaria","about":{"@type":"Thing","name":"Historia de Canarias"},"editor":{"@type":"Person","name":"Juan Pedro Rivero González"},"author":[{"@type":"Person","name":"Sara Díaz Machado"},{"@type":"Person","name":"Irene Acosta Pérez"},{"@type":"Person","name":"Marco Ruano Méndez"},{"@type":"Person","name":"Faisal El Madmadi Azouaghe"},{"@type":"Person","name":"Carla Marrero Brito"},{"@type":"Person","name":"David Moya de Dios"},{"@type":"Person","name":"Fiamma Espinosa Delgado"},{"@type":"Person","name":"Ricardo Brito Arvelo"},{"@type":"Person","name":"Laura Pérez Hernández"},{"@type":"Person","name":"Hugo Padrón Quintero"},{"@type":"Person","name":"Alba Escudero Malledo"},{"@type":"Person","name":"Aura Correa Herrero"},{"@type":"Person","name":"Érika Darias García"},{"@type":"Person","name":"Lucía Hernández Flores"},{"@type":"Person","name":"Valentina Morales Díaz"},{"@type":"Person","name":"Aydam Besay Salazar Martín"},{"@type":"Person","name":"Gabriel Alejandro González Chacón"},{"@type":"Person","name":"Desirée García Borges"},{"@type":"Person","name":"Náyade Negrín Hernández"},{"@type":"Person","name":"Gisell González Bencomo"},{"@type":"Person","name":"Edgar Dorta Martín"},{"@type":"Person","name":"Noelia Anahí Antón González"},{"@type":"Person","name":"Sergio Bencomo Padilla"},{"@type":"Person","name":"Diego Castro Lorenzo"},{"@type":"Person","name":"Cristina Muñoz Castro"},{"@type":"Person","name":"Carlos Lemes Flores"},{"@type":"Person","name":"Paula Hernández Sanfiel"},{"@type":"Person","name":"Aythami Bolaños Cattaneo"},{"@type":"Person","name":"Tomas Viktora Majer"},{"@type":"Person","name":"Sheila García Santiago"},{"@type":"Person","name":"Nerea García Aguilar"},{"@type":"Person","name":"Elena Rodríguez Rodríguez"},{"@type":"Person","name":"Héctor Álvarez Pérez"},{"@type":"Person","name":"Carla Llarena Acosta"},{"@type":"Person","name":"Ismael Benítez Díaz"},{"@type":"Person","name":"Paula Pérez Estrello"},{"@type":"Person","name":"Ainara De Luis Hernández"},{"@type":"Person","name":"Sara Bramon Serrallonga"},{"@type":"Person","name":"Daniela Meneses González"},{"@type":"Person","name":"Aythami Pérez Cabrera"},{"@type":"Person","name":"Nerea Lorenzo Felipe"},{"@type":"Person","name":"Óscar Rivero García"},{"@type":"Person","name":"Valeria Daganzo Castañeyra"},{"@type":"Person","name":"Valeria Dorta Sardano"},{"@type":"Person","name":"Helena Ortiz Almenara"},{"@type":"Person","name":"Martina Hernández Díaz"},{"@type":"Person","name":"David González Llanos"},{"@type":"Person","name":"Julia García Toledo"},{"@type":"Person","name":"Noelia Rodríguez Espinosa"},{"@type":"Person","name":"Asier Estévez Hernández"},{"@type":"Person","name":"Andrea Santana Trujillo"},{"@type":"Person","name":"Leyre González Oliva"},{"@type":"Person","name":"Gabriel González Martín"},{"@type":"Person","name":"Teo Nadín Díaz García"},{"@type":"Person","name":"Daniel Santana Espino"},{"@type":"Person","name":"Javier Escuela Rodríguez"},{"@type":"Person","name":"Paula Miranda Pascual"},{"@type":"Person","name":"Laura del Pilar Concepción de la Cruz"},{"@type":"Person","name":"Laura Morales Morales"},{"@type":"Person","name":"Gabriel Luis Marcos Gavilán"},{"@type":"Person","name":"Rafael Campos González"},{"@type":"Person","name":"Laia Genover Bassagañas"}],"sourceOrganization":{"@type":"CollegeOrUniversity","name":"Universidad de La Laguna","url":"https://www.ull.es"}}</script>
+<canvas id="cielo" aria-hidden="true"></canvas>
+<div id="destello" aria-hidden="true"></div>
+<a class="skip" href="#matriz">Ir a la matriz</a>
+<div id="app">
+  <header class="top" id="top">
+    <nav class="obras" aria-label="Obras de Didáctica de las Ciencias Sociales I"><a href="100-momentos.html"><span class="l">100 momentos de Historia de Canarias</span><span class="c">100 momentos</span></a><i aria-hidden="true">/</i><a href="#inicio" aria-current="page"><span class="l">Situaciones de aprendizaje</span><span class="c">Situaciones</span></a></nav>
+    <nav class="tnav" aria-label="Secciones"><a href="#matriz">Matriz</a><a href="#autoria">Autoría</a><a href="#coleccion">La colección</a></nav>
+    <label class="search">
+      <span class="vh">Buscar por pregunta, título, producto, autoría o número</span>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.6 10.6 14 14"/></svg>
+      <input id="q" type="search" placeholder="Buscar pregunta, tema o nombre" data-corto="Buscar" autocomplete="off" spellcheck="false">
+    </label>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div>
+        <p class="kicker">Historia de Canarias · Educación Primaria</p>
+        <h1>Situaciones de aprendizaje<span class="resto">para enseñar la Historia de Canarias</span></h1>
+        <p class="lede">81 propuestas didácticas para Educación Primaria diseñadas por el alumnado de Didáctica de las Ciencias Sociales I. Cada situación parte de una pregunta guía, se desarrolla en sesiones de trabajo con fuentes históricas y concluye en un producto final que el grupo elabora y comparte.</p>
+        <ol class="ruta" aria-label="Estructura de cada situación">
+          <li><b>Pregunta guía</b></li><li><b>Secuencia didáctica</b></li><li><b>Producto final</b></li><li><b>Evaluación</b></li>
+        </ol>
+        <p class="doclinks">Consulta la <a href="#introduccion">introducción general</a>, la <a href="#conclusion">conclusión final</a> y la <a href="#coleccion">ficha de la colección</a>.</p>
+      </div>
+    </section>
+
+    <section class="sec cen" id="matriz">
+      <div class="panel">
+      <h2>La matriz de las situaciones</h2>
+      <details class="filtros-box" id="filtros-box">
+      <summary>Filtrar por tema o por producto final</summary>
+      <div class="filtros">
+        <span class="lbl" id="l-tema">Tema</span>
+        <div class="chips" role="group" aria-labelledby="l-tema">
+          <button class="chip tema" type="button" data-tema="1" aria-pressed="false"><span class="l">Vivir en islas</span><span class="k">9</span></button>
+          <button class="chip tema" type="button" data-tema="2" aria-pressed="false"><span class="l">Rutas atlánticas y puertos</span><span class="k">11</span></button>
+          <button class="chip tema" type="button" data-tema="3" aria-pressed="false"><span class="l">Economía y trabajo</span><span class="k">11</span></button>
+          <button class="chip tema" type="button" data-tema="4" aria-pressed="false"><span class="l">Migraciones y población</span><span class="k">8</span></button>
+          <button class="chip tema" type="button" data-tema="5" aria-pressed="false"><span class="l">El agua</span><span class="k">4</span></button>
+          <button class="chip tema" type="button" data-tema="6" aria-pressed="false"><span class="l">Iglesia y creencias</span><span class="k">12</span></button>
+          <button class="chip tema" type="button" data-tema="7" aria-pressed="false"><span class="l">Culturas e identidad</span><span class="k">10</span></button>
+          <button class="chip tema" type="button" data-tema="8" aria-pressed="false"><span class="l">Gobierno y territorio</span><span class="k">13</span></button>
+          <button class="chip tema" type="button" data-tema="9" aria-pressed="false"><span class="l">Sociedad, escuela y libertades</span><span class="k">14</span></button>
+          <button class="chip tema" type="button" data-tema="10" aria-pressed="false"><span class="l">Ciudad, turismo y patrimonio</span><span class="k">10</span></button>
+        </div>
+        <span class="lbl" id="l-tipo">Producto final</span>
+        <div class="chips" role="group" aria-labelledby="l-tipo">
+          <button class="chip tipo" type="button" data-tipo="mural" aria-pressed="false"><span class="l">Mural o panel</span><span class="k">45</span></button>
+          <button class="chip tipo" type="button" data-tipo="mapa" aria-pressed="false"><span class="l">Mapa</span><span class="k">26</span></button>
+          <button class="chip tipo" type="button" data-tipo="exposicion" aria-pressed="false"><span class="l">Exposición o feria</span><span class="k">27</span></button>
+          <button class="chip tipo" type="button" data-tipo="linea" aria-pressed="false"><span class="l">Línea del tiempo</span><span class="k">19</span></button>
+          <button class="chip tipo" type="button" data-tipo="museo" aria-pressed="false"><span class="l">Museo de aula</span><span class="k">15</span></button>
+          <button class="chip tipo" type="button" data-tipo="prensa" aria-pressed="false"><span class="l">Prensa</span><span class="k">10</span></button>
+          <button class="chip tipo" type="button" data-tipo="audiovisual" aria-pressed="false"><span class="l">Vídeo, audio o pódcast</span><span class="k">8</span></button>
+          <button class="chip tipo" type="button" data-tipo="libro" aria-pressed="false"><span class="l">Libro, cómic o dosier</span><span class="k">9</span></button>
+          <button class="chip tipo" type="button" data-tipo="maqueta" aria-pressed="false"><span class="l">Maqueta</span><span class="k">1</span></button>
+          <button class="chip tipo" type="button" data-tipo="guia" aria-pressed="false"><span class="l">Ruta o guía</span><span class="k">2</span></button>
+          <button class="chip tipo" type="button" data-tipo="juego" aria-pressed="false"><span class="l">Juego</span><span class="k">4</span></button>
+        </div>
+      </div>
+      </details>
+      <p class="res" id="res" aria-live="polite"></p>
+      <p class="mx-cap" id="mxcap" aria-live="polite"></p>
+      <div class="mx" id="mx">
+        <div class="mx-row e1"><span class="lab"><b>I</b><span>Poblamiento antiguo</span></span><a class="cell" data-n="1" href="#m1" aria-label="1. La formación volcánica del archipiélago canario. Sara Díaz Machado">1</a><a class="cell" data-n="2" href="#m2" aria-label="2. Diferencias geográficas y ecológicas de las islas Canarias. Irene Acosta Pérez">2</a><a class="cell" data-n="3" href="#m3" aria-label="3. Los primeros pobladores de Canarias: adaptación y territorio">3</a><a class="cell" data-n="4" href="#m4" aria-label="4. Las conexiones culturales entre Canarias y el norte de África. Marco Ruano Méndez">4</a><a class="cell" data-n="5" href="#m5" aria-label="5. ¿Cómo vivían y trabajaban los habitantes de Canarias?. Faisal El Madmadi Azouaghe">5</a><a class="cell" data-n="6" href="#m6" aria-label="6. ¿Cómo se organizaban las sociedades indígenas de Canarias antes de la conquista?">6</a><span class="cell vacia" title="Momento 7: sin situación de aprendizaje en esta colección">7</span><a class="cell" data-n="8" href="#m8" aria-label="8. ¿Cómo enterraban a sus muertos los antiguos habitantes de Canarias?. Carla Marrero Brito">8</a><a class="cell" data-n="9" href="#m9" aria-label="9. Espacios simbólicos y sagrados en el paisaje de Canarias. David Moya de Dios">9</a><span class="cell vacia" title="Momento 10: sin situación de aprendizaje en esta colección">10</span></div>
+        <div class="mx-row e2"><span class="lab"><b>II</b><span>Conquista</span></span><a class="cell" data-n="11" href="#m11" aria-label="11. ¿Por qué todos querían las islas?. Fiamma Espinosa Delgado">11</a><a class="cell" data-n="12" href="#m12" aria-label="12. ¿Por qué Canarias era importante para los navegantes del Atlántico?">12</a><a class="cell" data-n="13" href="#m13" aria-label="13. Primeros asentamientos europeos en las islas orientales. Ricardo Brito Arvelo">13</a><a class="cell" data-n="14" href="#m14" aria-label="14. Creación del Obispado de Rubicón: rutas, comercio y cambios del pasado">14</a><a class="cell" data-n="15" href="#m15" aria-label="15. La conquista de Gran Canaria">15</a><a class="cell" data-n="16" href="#m16" aria-label="16. Descubrimos la conquista de La Palma. Laura Pérez Hernández">16</a><span class="cell vacia" title="Momento 17: sin situación de aprendizaje en esta colección">17</span><a class="cell" data-n="18" href="#m18" aria-label="18. Establecimiento de cabildos insulares. Hugo Padrón Quintero">18</a><a class="cell" data-n="19" href="#m19" aria-label="19. La tierra, el agua y una decisión que cambió Canarias. Paula Suárez Gil">19</a><a class="cell" data-n="20" href="#m20" aria-label="20. Integración de Canarias en la Corona de Castilla. Alba Escudero Malledo">20</a></div>
+        <div class="mx-row e3"><span class="lab"><b>III</b><span>Sociedad atlántica</span></span><span class="cell vacia" title="Momento 21: sin situación de aprendizaje en esta colección">21</span><a class="cell" data-n="22" href="#m22" aria-label="22. Implantación de la red parroquial y organización territorial. Aura Correa Herrero">22</a><a class="cell" data-n="23" href="#m23" aria-label="23. Economía azucarera y comercio atlántico. Érika Darias García">23</a><a class="cell" data-n="24" href="#m24" aria-label="24. ¿Cómo cambió Canarias después de la conquista?. Lucía Hernández Flores">24</a><a class="cell" data-n="25" href="#m25" aria-label="25. ¿Cómo han cambiado nuestras ciudades a lo largo del tiempo?. Valentina Morales Díaz">25</a><a class="cell" data-n="26" href="#m26" aria-label="26. Ataques corsarios y fortificación costera (1599-1747). Aydam Besay Salazar Martín">26</a><span class="cell vacia" title="Momento 27: sin situación de aprendizaje en esta colección">27</span><a class="cell" data-n="28" href="#m28" aria-label="28. ¿Quién podía decidir lo que estaba bien? Canarias y el Santo Oficio. Gabriel Alejandro González Chacón">28</a><a class="cell" data-n="29" href="#m29" aria-label="29. Migraciones hacia América. Desirée García Borges">29</a><span class="cell vacia" title="Momento 30: sin situación de aprendizaje en esta colección">30</span></div>
+        <div class="mx-row e4"><span class="lab"><b>IV</b><span>Siglo XVIII</span></span><a class="cell" data-n="31" href="#m31" aria-label="31. Las reformas administrativas borbónicas en el siglo XVIII. Náyade Negrín Hernández">31</a><a class="cell" data-n="32" href="#m32" aria-label="32. Reorganizando el mapa: instituciones, territorio y patrimonio">32</a><a class="cell" data-n="33" href="#m33" aria-label="33. Descubrimos la Ilustración en Canarias a través de José de Viera y Clavijo. Gisell González Bencomo">33</a><span class="cell vacia" title="Momento 34: sin situación de aprendizaje en esta colección">34</span><a class="cell" data-n="35" href="#m35" aria-label="35. Canarias y América, un viaje por el Atlántico. Edgar Dorta Martín">35</a><a class="cell" data-n="36" href="#m36" aria-label="36. Detectives del Barroco: ¿qué es y dónde lo encontramos en Canarias?. Noelia Anahí Antón González">36</a><a class="cell" data-n="37" href="#m37" aria-label="37. Detectives del siglo XIX">37</a><a class="cell" data-n="38" href="#m38" aria-label="38. El crecimiento de los núcleos urbanos. Sergio Bencomo Padilla">38</a><a class="cell" data-n="39" href="#m39" aria-label="39. Canarias, unidas por el mar: movilidad interinsular en el siglo XVIII">39</a><a class="cell" data-n="40" href="#m40" aria-label="40. ¿Era posible cambiar de posición social en la Canarias del siglo XVIII?. Diego Castro Lorenzo">40</a></div>
+        <div class="mx-row e5"><span class="lab"><b>V</b><span>Siglo XIX</span></span><a class="cell" data-n="41" href="#m41" aria-label="41. División provincial de 1833. Cristina Muñoz Castro">41</a><a class="cell" data-n="42" href="#m42" aria-label="42. Desamortización y efectos sobre sociedades civiles y eclesiásticas. Carlos Lemes Flores">42</a><a class="cell" data-n="43" href="#m43" aria-label="43. Expansión y crisis de la cochinilla. Paula Hernández Sanfiel">43</a><a class="cell" data-n="44" href="#m44" aria-label="44. Concordato de 1851 y reorganización eclesiástica. Aythami Bolaños Cattaneo">44</a><a class="cell" data-n="45" href="#m45" aria-label="45. Desarrollo de las infraestructuras portuarias. Tomas Viktora Majer">45</a><a class="cell" data-n="46" href="#m46" aria-label="46. La expansión del plátano y el tomate. Sheila García Santiago">46</a><a class="cell" data-n="47" href="#m47" aria-label="47. Migraciones hacia América. Nerea García Aguilar">47</a><a class="cell" data-n="48" href="#m48" aria-label="48. ¿Cómo cambió Canarias cuando crecieron sus puertos?. Elena Rodríguez Rodríguez">48</a><span class="cell vacia" title="Momento 49: sin situación de aprendizaje en esta colección">49</span><a class="cell" data-n="50" href="#m50" aria-label="50. La transformación educativa en Canarias durante el siglo XIX. Héctor Álvarez Pérez">50</a></div>
+        <div class="mx-row e6"><span class="lab"><b>VI</b><span>1900–1936</span></span><a class="cell" data-n="51" href="#m51" aria-label="51. Puertos en transformación: La Luz y Santa Cruz. Carla Llarena Acosta">51</a><a class="cell" data-n="52" href="#m52" aria-label="52. Diversificación agrícola (1900-1935). Ismael Benítez Díaz">52</a><span class="cell vacia" title="Momento 53: sin situación de aprendizaje en esta colección">53</span><a class="cell" data-n="54" href="#m54" aria-label="54. Canarias en 1931. Paula Pérez Estrello">54</a><a class="cell" data-n="55" href="#m55" aria-label="55. Reformas educativas y culturales. Ainara De Luis Hernández">55</a><a class="cell" data-n="56" href="#m56" aria-label="56. ¿Por qué aumentaron las tensiones sociales y políticas en Canarias entre 1931 y 1936?">56</a><a class="cell" data-n="57" href="#m57" aria-label="57. Tenerife cambia: ¿crecer siempre significa mejorar?. Sara Bramon Serrallonga">57</a><a class="cell" data-n="58" href="#m58" aria-label="58. El agua en Canarias: infraestructuras hidráulicas y gestión histórica. Daniela Meneses González">58</a><span class="cell vacia" title="Momento 59: sin situación de aprendizaje en esta colección">59</span><span class="cell vacia" title="Momento 60: sin situación de aprendizaje en esta colección">60</span></div>
+        <div class="mx-row e7"><span class="lab"><b>VII</b><span>Guerra y franquismo</span></span><a class="cell" data-n="61" href="#m61" aria-label="61. Canarias en julio de 1936: investigamos nuestro pasado. Aythami Pérez Cabrera">61</a><a class="cell" data-n="62" href="#m62" aria-label="62. Una guerra sin frente en Canarias. David Rodríguez Grajeda">62</a><a class="cell" data-n="63" href="#m63" aria-label="63. Relaciones Iglesia-Estado en el marco del régimen franquista. Nerea Lorenzo Felipe">63</a><a class="cell" data-n="64" href="#m64" aria-label="64. Las cartillas del hambre: ¿cómo sobrevivieron nuestras familias en la Canarias de posguerra?. Óscar Rivero García">64</a><a class="cell" data-n="65" href="#m65" aria-label="65. Voces del Atlántico. Daniel López Sosa">65</a><span class="cell vacia" title="Momento 66: sin situación de aprendizaje en esta colección">66</span><a class="cell" data-n="67" href="#m67" aria-label="67. ¿Quién decide qué se debate? La Asamblea Pastoral de Canarias (1975). Valeria Daganzo Castañeyra">67</a><a class="cell" data-n="68" href="#m68" aria-label="68. Descubrimos cómo el turismo transformó Canarias (1936-1975). Valeria Dorta Sardano">68</a><a class="cell" data-n="69" href="#m69" aria-label="69. La fuerza del barrio y la calle: movimientos sociales en el tardofranquismo. Helena Ortiz Almenara">69</a><a class="cell" data-n="70" href="#m70" aria-label="70. Crecimiento poblacional. Martina Hernández Díaz">70</a></div>
+        <div class="mx-row e8"><span class="lab"><b>VIII</b><span>Democracia</span></span><a class="cell" data-n="71" href="#m71" aria-label="71. Canarias se transforma: la Transición política">71</a><a class="cell" data-n="72" href="#m72" aria-label="72. ¿Sabes lo que ocurrió en 1982 en Canarias?. David González Llanos">72</a><span class="cell vacia" title="Momento 73: sin situación de aprendizaje en esta colección">73</span><span class="cell vacia" title="Momento 74: sin situación de aprendizaje en esta colección">74</span><a class="cell" data-n="75" href="#m75" aria-label="75. Descubrimos el patrimonio de Canarias: una historia que está a nuestro alrededor. Julia García Toledo">75</a><a class="cell" data-n="76" href="#m76" aria-label="76. Del campo a la costa canaria. Noelia Rodríguez Espinosa">76</a><a class="cell" data-n="77" href="#m77" aria-label="77. Canarias, una sociedad en cambio: migraciones y transformaciones. Asier Estévez Hernández">77</a><a class="cell" data-n="78" href="#m78" aria-label="78. La reforma del Estatuto de Autonomía de Canarias de 2018. Yumalay Herrera Armas">78</a><span class="cell vacia" title="Momento 79: sin situación de aprendizaje en esta colección">79</span><a class="cell" data-n="80" href="#m80" aria-label="80. La expansión universitaria en Canarias. Andrea Santana Trujillo">80</a></div>
+        <div class="mx-row e9"><span class="lab"><b>IX</b><span>Siglo XXI</span></span><span class="cell vacia" title="Momento 81: sin situación de aprendizaje en esta colección">81</span><a class="cell" data-n="82" href="#m82" aria-label="82. Transformaciones del modelo turístico. Cristina Muñoz Castro">82</a><a class="cell" data-n="83" href="#m83" aria-label="83. Misión Canarias Sostenible: guardianes de nuestras islas. Leyre González Oliva">83</a><a class="cell" data-n="84" href="#m84" aria-label="84. La erupción volcánica de La Palma en Cumbre Vieja (2021). Gabriel González Martín">84</a><a class="cell" data-n="85" href="#m85" aria-label="85. La gestión de emergencias en Canarias. Samuel Rivero Toste">85</a><a class="cell" data-n="86" href="#m86" aria-label="86. ¿Todas las personas creen en lo mismo? Diversidad religiosa en Canarias. Teo Nadín Díaz García">86</a><a class="cell" data-n="87" href="#m87" aria-label="87. ¿Nos han vuelto los ordenadores e Internet menos aislados?. Daniel Santana Espino">87</a><a class="cell" data-n="88" href="#m88" aria-label="88. Cambios demográficos en Canarias (1880-1960). Javier Escuela Rodríguez">88</a><a class="cell" data-n="89" href="#m89" aria-label="89. Guardianes del territorio: ¿cómo cuidamos nuestras islas?. Paula Miranda Pascual">89</a><span class="cell vacia" title="Momento 90: sin situación de aprendizaje en esta colección">90</span></div>
+        <div class="mx-row e10"><span class="lab"><b>X</b><span>Larga duración</span></span><a class="cell" data-n="91" href="#m91" aria-label="91. ¿Islas aisladas o conectadas?. Laura del Pilar Concepción de la Cruz">91</a><a class="cell" data-n="92" href="#m92" aria-label="92. Canarias, una economía mirando al exterior">92</a><a class="cell" data-n="93" href="#m93" aria-label="93. Canarias, un territorio de ida y vuelta. Laura Morales Morales">93</a><span class="cell vacia" title="Momento 94: sin situación de aprendizaje en esta colección">94</span><a class="cell" data-n="95" href="#m95" aria-label="95. Gestión del agua como elemento organizador. Iker Rodríguez González">95</a><span class="cell vacia" title="Momento 96: sin situación de aprendizaje en esta colección">96</span><a class="cell" data-n="97" href="#m97" aria-label="97. Pluralidad cultural como rasgo estructural de Canarias. Gabriel Luis Marcos Gavilán">97</a><a class="cell" data-n="98" href="#m98" aria-label="98. Patrimonio histórico como recurso económico y cultural. Rafael Campos González">98</a><a class="cell" data-n="99" href="#m99" aria-label="99. Equilibrios interinsulares en Canarias (1808-1982). Laia Genover Bassagañas">99</a><a class="cell" data-n="100" href="#m100" aria-label="100. Continuidad y cambio en la identidad canaria">100</a></div>
+      </div>
+      </div>
+    </section>
+
+    <section class="sec cen" id="autoria">
+      <h2>Autoría</h2>
+      <p class="sub">Alumnado del Grado en Maestro/a en Educación Primaria de la Universidad de La Laguna. Cada situación conserva la autoría que consigna la edición docente; la casilla de cada una en la matriz muestra también su autor o autora.</p>
+      <ol class="au">
+          <li class="e1"><a href="#m1"><span class="n">1</span><span class="a">Sara Díaz Machado</span><span class="t">La formación volcánica del archipiélago canario</span></a></li>
+          <li class="e1"><a href="#m2"><span class="n">2</span><span class="a">Irene Acosta Pérez</span><span class="t">Diferencias geográficas y ecológicas de las islas Canarias</span></a></li>
+          <li class="e1"><a href="#m4"><span class="n">4</span><span class="a">Marco Ruano Méndez</span><span class="t">Las conexiones culturales entre Canarias y el norte de África</span></a></li>
+          <li class="e1"><a href="#m5"><span class="n">5</span><span class="a">Faisal El Madmadi Azouaghe</span><span class="t">¿Cómo vivían y trabajaban los habitantes de Canarias?</span></a></li>
+          <li class="e1"><a href="#m8"><span class="n">8</span><span class="a">Carla Marrero Brito</span><span class="t">¿Cómo enterraban a sus muertos los antiguos habitantes de Canarias?</span></a></li>
+          <li class="e1"><a href="#m9"><span class="n">9</span><span class="a">David Moya de Dios</span><span class="t">Espacios simbólicos y sagrados en el paisaje de Canarias</span></a></li>
+          <li class="e2"><a href="#m11"><span class="n">11</span><span class="a">Fiamma Espinosa Delgado</span><span class="t">¿Por qué todos querían las islas?</span></a></li>
+          <li class="e2"><a href="#m13"><span class="n">13</span><span class="a">Ricardo Brito Arvelo</span><span class="t">Primeros asentamientos europeos en las islas orientales</span></a></li>
+          <li class="e2"><a href="#m16"><span class="n">16</span><span class="a">Laura Pérez Hernández</span><span class="t">Descubrimos la conquista de La Palma</span></a></li>
+          <li class="e2"><a href="#m18"><span class="n">18</span><span class="a">Hugo Padrón Quintero</span><span class="t">Establecimiento de cabildos insulares</span></a></li>
+          <li class="e2"><a href="#m19"><span class="n">19</span><span class="a">Paula Suárez Gil <i>(sin confirmar)</i></span><span class="t">La tierra, el agua y una decisión que cambió Canarias</span></a></li>
+          <li class="e2"><a href="#m20"><span class="n">20</span><span class="a">Alba Escudero Malledo</span><span class="t">Integración de Canarias en la Corona de Castilla</span></a></li>
+          <li class="e3"><a href="#m22"><span class="n">22</span><span class="a">Aura Correa Herrero</span><span class="t">Implantación de la red parroquial y organización territorial</span></a></li>
+          <li class="e3"><a href="#m23"><span class="n">23</span><span class="a">Érika Darias García</span><span class="t">Economía azucarera y comercio atlántico</span></a></li>
+          <li class="e3"><a href="#m24"><span class="n">24</span><span class="a">Lucía Hernández Flores</span><span class="t">¿Cómo cambió Canarias después de la conquista?</span></a></li>
+          <li class="e3"><a href="#m25"><span class="n">25</span><span class="a">Valentina Morales Díaz</span><span class="t">¿Cómo han cambiado nuestras ciudades a lo largo del tiempo?</span></a></li>
+          <li class="e3"><a href="#m26"><span class="n">26</span><span class="a">Aydam Besay Salazar Martín</span><span class="t">Ataques corsarios y fortificación costera (1599-1747)</span></a></li>
+          <li class="e3"><a href="#m28"><span class="n">28</span><span class="a">Gabriel Alejandro González Chacón</span><span class="t">¿Quién podía decidir lo que estaba bien? Canarias y el Santo Oficio</span></a></li>
+          <li class="e3"><a href="#m29"><span class="n">29</span><span class="a">Desirée García Borges</span><span class="t">Migraciones hacia América</span></a></li>
+          <li class="e4"><a href="#m31"><span class="n">31</span><span class="a">Náyade Negrín Hernández</span><span class="t">Las reformas administrativas borbónicas en el siglo XVIII</span></a></li>
+          <li class="e4"><a href="#m33"><span class="n">33</span><span class="a">Gisell González Bencomo</span><span class="t">Descubrimos la Ilustración en Canarias a través de José de Viera y Clavijo</span></a></li>
+          <li class="e4"><a href="#m35"><span class="n">35</span><span class="a">Edgar Dorta Martín</span><span class="t">Canarias y América, un viaje por el Atlántico</span></a></li>
+          <li class="e4"><a href="#m36"><span class="n">36</span><span class="a">Noelia Anahí Antón González</span><span class="t">Detectives del Barroco: ¿qué es y dónde lo encontramos en Canarias?</span></a></li>
+          <li class="e4"><a href="#m38"><span class="n">38</span><span class="a">Sergio Bencomo Padilla</span><span class="t">El crecimiento de los núcleos urbanos</span></a></li>
+          <li class="e4"><a href="#m40"><span class="n">40</span><span class="a">Diego Castro Lorenzo</span><span class="t">¿Era posible cambiar de posición social en la Canarias del siglo XVIII?</span></a></li>
+          <li class="e5"><a href="#m41"><span class="n">41</span><span class="a">Cristina Muñoz Castro</span><span class="t">División provincial de 1833</span></a></li>
+          <li class="e5"><a href="#m42"><span class="n">42</span><span class="a">Carlos Lemes Flores</span><span class="t">Desamortización y efectos sobre sociedades civiles y eclesiásticas</span></a></li>
+          <li class="e5"><a href="#m43"><span class="n">43</span><span class="a">Paula Hernández Sanfiel</span><span class="t">Expansión y crisis de la cochinilla</span></a></li>
+          <li class="e5"><a href="#m44"><span class="n">44</span><span class="a">Aythami Bolaños Cattaneo</span><span class="t">Concordato de 1851 y reorganización eclesiástica</span></a></li>
+          <li class="e5"><a href="#m45"><span class="n">45</span><span class="a">Tomas Viktora Majer</span><span class="t">Desarrollo de las infraestructuras portuarias</span></a></li>
+          <li class="e5"><a href="#m46"><span class="n">46</span><span class="a">Sheila García Santiago</span><span class="t">La expansión del plátano y el tomate</span></a></li>
+          <li class="e5"><a href="#m47"><span class="n">47</span><span class="a">Nerea García Aguilar</span><span class="t">Migraciones hacia América</span></a></li>
+          <li class="e5"><a href="#m48"><span class="n">48</span><span class="a">Elena Rodríguez Rodríguez</span><span class="t">¿Cómo cambió Canarias cuando crecieron sus puertos?</span></a></li>
+          <li class="e5"><a href="#m50"><span class="n">50</span><span class="a">Héctor Álvarez Pérez</span><span class="t">La transformación educativa en Canarias durante el siglo XIX</span></a></li>
+          <li class="e6"><a href="#m51"><span class="n">51</span><span class="a">Carla Llarena Acosta</span><span class="t">Puertos en transformación: La Luz y Santa Cruz</span></a></li>
+          <li class="e6"><a href="#m52"><span class="n">52</span><span class="a">Ismael Benítez Díaz</span><span class="t">Diversificación agrícola (1900-1935)</span></a></li>
+          <li class="e6"><a href="#m54"><span class="n">54</span><span class="a">Paula Pérez Estrello</span><span class="t">Canarias en 1931</span></a></li>
+          <li class="e6"><a href="#m55"><span class="n">55</span><span class="a">Ainara De Luis Hernández</span><span class="t">Reformas educativas y culturales</span></a></li>
+          <li class="e6"><a href="#m57"><span class="n">57</span><span class="a">Sara Bramon Serrallonga</span><span class="t">Tenerife cambia: ¿crecer siempre significa mejorar?</span></a></li>
+          <li class="e6"><a href="#m58"><span class="n">58</span><span class="a">Daniela Meneses González</span><span class="t">El agua en Canarias: infraestructuras hidráulicas y gestión histórica</span></a></li>
+          <li class="e7"><a href="#m61"><span class="n">61</span><span class="a">Aythami Pérez Cabrera</span><span class="t">Canarias en julio de 1936: investigamos nuestro pasado</span></a></li>
+          <li class="e7"><a href="#m62"><span class="n">62</span><span class="a">David Rodríguez Grajeda <i>(sin confirmar)</i></span><span class="t">Una guerra sin frente en Canarias</span></a></li>
+          <li class="e7"><a href="#m63"><span class="n">63</span><span class="a">Nerea Lorenzo Felipe</span><span class="t">Relaciones Iglesia-Estado en el marco del régimen franquista</span></a></li>
+          <li class="e7"><a href="#m64"><span class="n">64</span><span class="a">Óscar Rivero García</span><span class="t">Las cartillas del hambre: ¿cómo sobrevivieron nuestras familias en la Canarias de posguerra?</span></a></li>
+          <li class="e7"><a href="#m65"><span class="n">65</span><span class="a">Daniel López Sosa <i>(sin confirmar)</i></span><span class="t">Voces del Atlántico</span></a></li>
+          <li class="e7"><a href="#m67"><span class="n">67</span><span class="a">Valeria Daganzo Castañeyra</span><span class="t">¿Quién decide qué se debate? La Asamblea Pastoral de Canarias (1975)</span></a></li>
+          <li class="e7"><a href="#m68"><span class="n">68</span><span class="a">Valeria Dorta Sardano</span><span class="t">Descubrimos cómo el turismo transformó Canarias (1936-1975)</span></a></li>
+          <li class="e7"><a href="#m69"><span class="n">69</span><span class="a">Helena Ortiz Almenara</span><span class="t">La fuerza del barrio y la calle: movimientos sociales en el tardofranquismo</span></a></li>
+          <li class="e7"><a href="#m70"><span class="n">70</span><span class="a">Martina Hernández Díaz</span><span class="t">Crecimiento poblacional</span></a></li>
+          <li class="e8"><a href="#m72"><span class="n">72</span><span class="a">David González Llanos</span><span class="t">¿Sabes lo que ocurrió en 1982 en Canarias?</span></a></li>
+          <li class="e8"><a href="#m75"><span class="n">75</span><span class="a">Julia García Toledo</span><span class="t">Descubrimos el patrimonio de Canarias: una historia que está a nuestro alrededor</span></a></li>
+          <li class="e8"><a href="#m76"><span class="n">76</span><span class="a">Noelia Rodríguez Espinosa</span><span class="t">Del campo a la costa canaria</span></a></li>
+          <li class="e8"><a href="#m77"><span class="n">77</span><span class="a">Asier Estévez Hernández</span><span class="t">Canarias, una sociedad en cambio: migraciones y transformaciones</span></a></li>
+          <li class="e8"><a href="#m78"><span class="n">78</span><span class="a">Yumalay Herrera Armas <i>(sin confirmar)</i></span><span class="t">La reforma del Estatuto de Autonomía de Canarias de 2018</span></a></li>
+          <li class="e8"><a href="#m80"><span class="n">80</span><span class="a">Andrea Santana Trujillo</span><span class="t">La expansión universitaria en Canarias</span></a></li>
+          <li class="e9"><a href="#m82"><span class="n">82</span><span class="a">Cristina Muñoz Castro</span><span class="t">Transformaciones del modelo turístico</span></a></li>
+          <li class="e9"><a href="#m83"><span class="n">83</span><span class="a">Leyre González Oliva</span><span class="t">Misión Canarias Sostenible: guardianes de nuestras islas</span></a></li>
+          <li class="e9"><a href="#m84"><span class="n">84</span><span class="a">Gabriel González Martín</span><span class="t">La erupción volcánica de La Palma en Cumbre Vieja (2021)</span></a></li>
+          <li class="e9"><a href="#m85"><span class="n">85</span><span class="a">Samuel Rivero Toste <i>(sin confirmar)</i></span><span class="t">La gestión de emergencias en Canarias</span></a></li>
+          <li class="e9"><a href="#m86"><span class="n">86</span><span class="a">Teo Nadín Díaz García</span><span class="t">¿Todas las personas creen en lo mismo? Diversidad religiosa en Canarias</span></a></li>
+          <li class="e9"><a href="#m87"><span class="n">87</span><span class="a">Daniel Santana Espino</span><span class="t">¿Nos han vuelto los ordenadores e Internet menos aislados?</span></a></li>
+          <li class="e9"><a href="#m88"><span class="n">88</span><span class="a">Javier Escuela Rodríguez</span><span class="t">Cambios demográficos en Canarias (1880-1960)</span></a></li>
+          <li class="e9"><a href="#m89"><span class="n">89</span><span class="a">Paula Miranda Pascual</span><span class="t">Guardianes del territorio: ¿cómo cuidamos nuestras islas?</span></a></li>
+          <li class="e10"><a href="#m91"><span class="n">91</span><span class="a">Laura del Pilar Concepción de la Cruz</span><span class="t">¿Islas aisladas o conectadas?</span></a></li>
+          <li class="e10"><a href="#m93"><span class="n">93</span><span class="a">Laura Morales Morales</span><span class="t">Canarias, un territorio de ida y vuelta</span></a></li>
+          <li class="e10"><a href="#m95"><span class="n">95</span><span class="a">Iker Rodríguez González <i>(sin confirmar)</i></span><span class="t">Gestión del agua como elemento organizador</span></a></li>
+          <li class="e10"><a href="#m97"><span class="n">97</span><span class="a">Gabriel Luis Marcos Gavilán</span><span class="t">Pluralidad cultural como rasgo estructural de Canarias</span></a></li>
+          <li class="e10"><a href="#m98"><span class="n">98</span><span class="a">Rafael Campos González</span><span class="t">Patrimonio histórico como recurso económico y cultural</span></a></li>
+          <li class="e10"><a href="#m99"><span class="n">99</span><span class="a">Laia Genover Bassagañas</span><span class="t">Equilibrios interinsulares en Canarias (1808-1982)</span></a></li>
+      </ol>
+    </section>
+
+    <section class="sec cen" id="coleccion">
+      <h2>La colección</h2>
+      <div class="obra">
+        <div>
+          <h3>Resumen</h3>
+          <p class="abs">Colección de situaciones de aprendizaje elaboradas por el alumnado de la asignatura. Cada propuesta lleva un contenido de Historia de Canarias al aula de Primaria con una pregunta guía, una secuencia de sesiones basada en la indagación, las fuentes y el trabajo cooperativo, un producto final y su evaluación. La edición docente unificó la estructura y las referencias curriculares conservando el núcleo de cada propuesta, y las presenta como materiales que cada docente puede adaptar a su centro, a su municipio y a su grupo.</p>
+          <h3>Palabras clave</h3>
+          <p class="kw">situaciones de aprendizaje; Historia de Canarias; Educación Primaria; Didáctica de las Ciencias Sociales; LOMLOE.</p>
+          <h3>Cita sugerida</h3>
+          <p class="cite" id="cite-col">Rivero González, J. P. (coord.) (2026). <i>Situaciones de aprendizaje para enseñar la Historia de Canarias</i>. Propuestas del alumnado de Didáctica de las Ciencias Sociales I. Universidad de La Laguna.</p>
+          <button class="copy" type="button" data-copy="cite-col">Copiar la cita</button>
+          <p class="mini">Cada situación tiene además su propia cita al abrirla.</p>
+        </div>
+        <dl class="ficha">
+          <div><dt>Colección</dt><dd>Situaciones de aprendizaje para enseñar la Historia de Canarias</dd></div>
+          <div><dt>Contenido</dt><dd>81 situaciones de aprendizaje</dd></div>
+          <div><dt>Etapa</dt><dd>Educación Primaria</dd></div>
+          <div><dt>Área</dt><dd>Conocimiento del Medio Natural, Social y Cultural</dd></div>
+          <div><dt>Marco curricular</dt><dd>LOMLOE · Real Decreto 157/2022 · Decreto 211/2022 de Canarias</dd></div>
+          <div><dt>Institución</dt><dd><a href="https://www.ull.es">Universidad de La Laguna</a></dd></div>
+          <div><dt>Titulación</dt><dd>Grado en Maestro/a en Educación Primaria</dd></div>
+          <div><dt>Asignatura</dt><dd>Didáctica de las Ciencias Sociales I</dd></div>
+          <div><dt>Curso</dt><dd>2026/2027</dd></div>
+          <div><dt>Coordinación docente</dt><dd>Juan Pedro Rivero González</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><b>Situaciones de aprendizaje para enseñar la Historia de Canarias.</b> Propuestas elaboradas por el alumnado de Didáctica de las Ciencias Sociales I, Grado en Maestro/a en Educación Primaria, <a href="https://www.ull.es">Universidad de La Laguna</a>, curso 2026/2027. Coordinación docente: Juan Pedro Rivero González.</p>
+    <p>Cada situación se muestra tal como aparece en la edición docente, sin reescribirla. Son materiales para adaptar al centro, al municipio y al grupo.</p>
+    <p class="portada-enlace"><a href="index.html">Portada</a> · las dos obras de la asignatura: <a href="100-momentos.html">100 momentos de Historia de Canarias</a> y <a href="situaciones-aprendizaje.html">Situaciones de aprendizaje</a>.</p>
+  </footer>
+</div>
+<button class="pz-btn fondo-pausa" id="fondo-pausa" type="button" aria-label="Detener el movimiento del fondo" data-on="true"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path class="f" d="M5.2 3.2v9.6L12.6 8z"/></svg><span class="lbl">Activar animación</span></button>
+
+<div class="sheet e1" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title" hidden>
+  <aside class="sh-aside">
+    <button class="sh-close" id="sh-close" type="button">Volver al catálogo</button>
+    <p class="sh-per" id="sh-per"></p>
+    <p class="sh-num" id="sh-num"></p>
+    <h2 class="sh-title" id="sh-title"></h2>
+    <p class="sh-by" id="sh-by"></p>
+    <div class="sh-box" id="sh-q" hidden><small>Pregunta guía</small><p id="sh-qt"></p></div>
+    <div class="sh-box prod" id="sh-p" hidden><small>Producto final</small><p id="sh-pt"></p><p class="sh-note" id="sh-pn" hidden>Descripción de la edición web: la situación no le da un nombre propio.</p></div>
+    <p class="sh-ce" id="sh-ce" hidden></p>
+    <details class="sh-cite" id="sh-citebox"><summary>Cómo citar esta situación</summary><p id="sh-cite"></p><button class="copy" type="button" data-copy="sh-cite">Copiar la cita</button></details>
+    <nav class="sh-nav" id="sh-nav" aria-label="Situación anterior y siguiente"></nav>
+  </aside>
+  <div class="sh-main">
+    <div class="sh-bar">
+      <a class="tb mob" id="tb-prev" aria-label="Situación anterior"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></a>
+      <a class="tb mob" id="tb-next" aria-label="Situación siguiente"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+      <span class="info" id="tb-info"></span>
+      <button class="tb" id="tb-out" type="button" aria-label="Reducir"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9"/></svg></button>
+      <button class="tb" id="tb-in" type="button" aria-label="Ampliar"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3.5v9M3.5 8h9"/></svg></button>
+    </div>
+    <div class="sh-doc" id="sh-doc"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+'use strict';
+const D = {"s":{"1":["La formación volcánica del archipiélago canario","Sara Díaz Machado",0,"¿Cómo se formaron las islas Canarias?","Museo Escolar del Origen de Canarias",["mural","mapa","linea","museo","audiovisual","libro"],[2,5,6,7],1],"2":["Diferencias geográficas y ecológicas de las islas Canarias","Irene Acosta Pérez",0,"¿Por qué nuestras islas son tan diferentes entre ellas, si todas tienen un origen volcánico?","Pasapalabra y Trivial de las islas",["juego"],[2,5,6,7],0],"3":["Los primeros pobladores de Canarias: adaptación y territorio","",2,"¿Cómo consiguieron los primeros pobladores de Canarias convertir unas islas desconocidas en su hogar y cómo cambió su forma de vida al adaptarse a cada isla?","Museo digital del primer poblamiento de Canarias",["mural","exposicion","museo"],[2,7],1],"4":["Las conexiones culturales entre Canarias y el norte de África","Marco Ruano Méndez",0,"¿Cómo podemos descifrar los enigmas de nuestros antepasados para demostrar que el Norte de África sigue vivo en las palabras, la geografía y las tradiciones de la Canarias actual?","Rostros y Raíces: La huella del Norte de África en Canarias",["mural","audiovisual"],[2,7,8],1],"5":["¿Cómo vivían y trabajaban los habitantes de Canarias?","Faisal El Madmadi Azouaghe",0,"","Feria de la economía de Canarias",["mural","exposicion"],[2,6,7],1],"6":["¿Cómo se organizaban las sociedades indígenas de Canarias antes de la conquista?","",2,"","Canarias antes y después de la conquista",["mapa","exposicion","linea"],[2,5,7],1],"8":["¿Cómo enterraban a sus muertos los antiguos habitantes de Canarias?","Carla Marrero Brito",0,"¿Qué podemos descubrir sobre los antiguos habitantes de Canarias observando cómo enterraban a sus muertos?","Museo de las prácticas funerarias de Canarias",["mural","museo"],[2,5,7],0],"9":["Espacios simbólicos y sagrados en el paisaje de Canarias","David Moya de Dios",0,"¿Por qué ciertas montañas, roques y valles de nuestras islas son lugares sagrados o especiales para la historia y la identidad de Canarias?","Mapa Interactivo audiovisual: Geografía Simbólica de Canarias",["mapa","audiovisual"],[2,5,7],1],"11":["¿Por qué todos querían las islas?","Fiamma Espinosa Delgado",0,"¿Por qué las Islas Canarias pasaron de ser casi desconocidas a ser un lugar que querían tener varios reinos?","Línea del tiempo ilustrada (1312-1496)",["linea"],[2,7],0],"12":["¿Por qué Canarias era importante para los navegantes del Atlántico?","",2,"¿Por qué Canarias era importante para los navegantes que viajaban por el Atlántico?","Canarias y los viajes por el Atlántico",["mural","mapa","linea"],[2,7,8],1],"13":["Primeros asentamientos europeos en las islas orientales","Ricardo Brito Arvelo",0,"¿Por qué los asentamientos de 1402 modificaron para siempre la vida en las Islas Oeste y qué secretos guardan sus yacimientos para el estudio de las primeras interacciones entre europeos y indígenas?","Rubicón 1402: El origen del contacto",["exposicion","audiovisual"],[2,5,7],1],"14":["Creación del Obispado de Rubicón: rutas, comercio y cambios del pasado","",2,"¿Por qué se creó el Obispado de Rubicón en Lanzarote y qué nos permite conocer sobre la organización de Canarias a comienzos del siglo XV?","Voces entre Mar y Tierra",["audiovisual"],[2,5,7],1],"15":["La conquista de Gran Canaria","",2,"","Museo de la conquista de Gran Canaria",["mapa","linea","museo"],[2,5,7],1],"16":["Descubrimos la conquista de La Palma","Laura Pérez Hernández",0,"¿Cómo era La Palma antes de la conquista y qué cambió después?","La Palma: antes y después de la conquista",["mural","mapa"],[2,5,7],1],"18":["Establecimiento de cabildos insulares","Hugo Padrón Quintero",0,"¿Por qué se crearon los cabildos y cómo cambió la vida de las islas con su establecimiento?","Panel histórico: del cabildo de ayer al cabildo de hoy",["mural","linea"],[2,5,7,9],1],"19":["La tierra, el agua y una decisión que cambió Canarias","Paula Suárez Gil",1,"¿Quién se beneficiaba realmente de esa decisión y qué consecuencias podía tener para las demás personas y para el territorio?","El museo de las decisiones",["museo"],[2,5,6,7],0],"20":["Integración de Canarias en la Corona de Castilla","Alba Escudero Malledo",0,"¿Cómo cambió la vida de los antiguos habitantes de nuestras islas tras la llegada de la Corona de Castilla y qué huellas de ese encuentro siguen vivas en nosotros hoy en día?","Voces y Huellas de 1496: El Nacimiento de Canarias",["mural","mapa"],[2,5,7,8],1],"22":["Implantación de la red parroquial y organización territorial","Aura Correa Herrero",0,"","Canarias en transformación durante los siglos XVI–XVII",["mural","mapa","exposicion"],[2,5,7,9],1],"23":["Economía azucarera y comercio atlántico","Érika Darias García",0,"¿Cómo cambió el azúcar a Canarias entre 1483 y principios del siglo XVII, quién ganó y quién trabajó en ese sistema, y qué lecciones sobre el agua nos ha dejado?","Panel de derechos laborales del azúcar",["mural"],[2,6,7],0],"24":["¿Cómo cambió Canarias después de la conquista?","Lucía Hernández Flores",0,"¿Cómo cambió Canarias después de la conquista?","Canarias después de la conquista",["mural","exposicion","linea"],[2,5,7],1],"25":["¿Cómo han cambiado nuestras ciudades a lo largo del tiempo?","Valentina Morales Díaz",0,"¿Cómo podemos descubrir la historia de una ciudad mirando sus edificios?","Mapa histórico de nuestro patrimonio",["mapa"],[2,5,7],1],"26":["Ataques corsarios y fortificación costera (1599-1747)","Aydam Besay Salazar Martín",0,"","Canarias contra los corsarios",["mapa","exposicion"],[2,5,7],1],"28":["¿Quién podía decidir lo que estaba bien? Canarias y el Santo Oficio","Gabriel Alejandro González Chacón",0,"¿Cómo podemos descubrir qué podían hacer, pensar y creer las personas en Canarias cuando existía el Santo Oficio?","Archivo histórico del Santo Oficio en Canarias",["libro","linea","mapa"],[2,5,7,9],0],"29":["Migraciones hacia América","Desirée García Borges",0,"¿Quién viajaba desde Canarias a América hace más de quinientos años, quién daba permiso para hacerlo y qué se llevaban?","Cuaderno de embarque",["libro"],[2,7,8],0],"31":["Las reformas administrativas borbónicas en el siglo XVIII","Náyade Negrín Hernández",0,"¿Por qué el rey de España quiso cambiar el gobierno de Canarias en el siglo XVIII y cómo afectó eso a la gente que vivía en las islas?","Noticiero Histórico Ilustrado: Diario del Atlántico (1780)",["prensa","audiovisual"],[2,7,9],1],"32":["Reorganizando el mapa: instituciones, territorio y patrimonio","",2,"¿Por qué en el siglo XIX hizo falta dividir Canarias en dos diócesis y dos provincias, y de qué manera esos cambios convirtieron a La Laguna en una ciudad Patrimonio Mundial?","Guía interactiva para una feria del patrimonio",["guia","exposicion"],[2,5,7,9],0],"33":["Descubrimos la Ilustración en Canarias a través de José de Viera y Clavijo","Gisell González Bencomo",0,"¿Cómo podemos conocer las Islas Canarias del siglo XVIII a través de la vida, las obras y las ideas de José de Viera y Clavijo?","Exposición sobre José de Viera y Clavijo",["exposicion","mural"],[2,5,7],0],"35":["Canarias y América, un viaje por el Atlántico","Edgar Dorta Martín",0,"¿Cómo consiguió Canarias convertirse en un puente entre Europa y América y qué consecuencias tuvo este intercambio para las islas?","Mural del comercio entre Canarias y América",["mural"],[2,7],0],"36":["Detectives del Barroco: ¿qué es y dónde lo encontramos en Canarias?","Noelia Anahí Antón González",0,"¿Qué es el arte barroco?","El Barroco en Canarias",["mural","mapa"],[2,5,7],1],"37":["Detectives del siglo XIX","",2,"¿Cómo influyeron la producción de cochinilla y los Puertos Francos en los cambios que vivió Canarias durante el siglo XIX?","El doble motor de Canarias: El campo y el puerto",["mural"],[2,6,7],1],"38":["El crecimiento de los núcleos urbanos","Sergio Bencomo Padilla",0,"¿Cómo y por qué unos pequeños caseríos de pescadores se transformaron en las ciudades que conocemos hoy en día en las islas?","Maqueta o mural de una ciudad costera del siglo XVIII",["mural","maqueta"],[2,5,7],0],"39":["Canarias, unidas por el mar: movilidad interinsular en el siglo XVIII","",2,"¿Cómo se comunicaban las personas de las islas Canarias hace más de 200 años?","Museo de la movilidad de Canarias",["mapa","exposicion","museo"],[2,7],1],"40":["¿Era posible cambiar de posición social en la Canarias del siglo XVIII?","Diego Castro Lorenzo",0,"¿Era posible cambiar de posición social en la Canarias del siglo XVIII o la familia y el nacimiento determinaban el futuro de las personas?","Mapa de la sociedad canaria del siglo XVIII",["mapa"],[2,7,9],1],"41":["División provincial de 1833","Cristina Muñoz Castro",0,"¿Cómo podían organizarse siete islas en una sola provincia y por qué cambió esta organización con el paso del tiempo?","Mural de la organización territorial, de 1833 a hoy",["mural"],[2,5,7,9],0],"42":["Desamortización y efectos sobre sociedades civiles y eclesiásticas","Carlos Lemes Flores",0,"¿Qué ocurrió cuando se pusieron a la venta las tierras y edificios que pertenecían a la Iglesia y a los municipios, y cómo cambió la vida de las personas en Canarias?","Periódico de la desamortización",["exposicion","prensa"],[2,5,7],0],"43":["Expansión y crisis de la cochinilla","Paula Hernández Sanfiel",0,"¿Por qué la cochinilla llegó a ser tan importante para Canarias y qué ocurrió cuando dejó de serlo?","Museo de la cochinilla en Canarias",["linea","museo"],[2,5,6,7],1],"44":["Concordato de 1851 y reorganización eclesiástica","Aythami Bolaños Cattaneo",0,"¿Cómo cambió la vida en los pueblos de Canarias a mediados del siglo XIX cuando la tierra dejó de producir azúcar para producir cochinilla y los curas pasaron a cobrar del Estado?","El Eco de las Islas (Edición 1855)",["exposicion","prensa"],[2,5,7,9],1],"45":["Desarrollo de las infraestructuras portuarias","Tomas Viktora Majer",0,"¿Cómo cambiaron los puertos la vida de las personas y el desarrollo de Canarias?","Dossier histórico ilustrado",["mural","mapa","linea","libro"],[2,5,7],1],"46":["La expansión del plátano y el tomate","Sheila García Santiago",0,"¿Por qué el plátano y el tomate se hicieron tan importantes en Canarias?","Canarias cambia: la expansión del plátano y el tomate",["mural","prensa"],[2,6,7],1],"47":["Migraciones hacia América","Nerea García Aguilar",0,"¿De qué manera las migraciones históricas de los siglos XIX y XX desde Canarias hacia el continente americano transformaron la estructura socioeconómica del archipiélago y moldearon nuestro patrimonio cultural y lingüístico compartido?","Atlántico Compartido: Memoria y Migración",["mural","mapa","libro"],[2,7,8],1],"48":["¿Cómo cambió Canarias cuando crecieron sus puertos?","Elena Rodríguez Rodríguez",0,"¿Cómo cambió el crecimiento de los puertos nuestras ciudades y la vida de la gente en Canarias?","Nuestro museo del puerto",["mural","exposicion","museo"],[2,5,7],1],"50":["La transformación educativa en Canarias durante el siglo XIX","Héctor Álvarez Pérez",0,"¿Cómo cambió la educación en Canarias durante el siglo XIX y por qué las nuevas leyes no hicieron que la escolarización fuera igual para toda la población?","Museo de aula: De la escuela del siglo XIX a la educación organizada",["museo","mural"],[2,5,7],1],"51":["Puertos en transformación: La Luz y Santa Cruz","Carla Llarena Acosta",0,"","Canarias, una puerta al Atlántico",["mural","exposicion"],[2,5,7],1],"52":["Diversificación agrícola (1900-1935)","Ismael Benítez Díaz",0,"¿Por qué en Canarias a principios del siglo XX se empezó a priorizar los cultivos de plátano y tomate sobre los cultivos de papas y cereales?","El Periódico de la Historia Agrícola Canaria (1900-1935)",["mural","linea","prensa"],[2,6,7],1],"54":["Canarias en 1931","Paula Pérez Estrello",0,"¿Por qué salió junta toda esa gente a la calle en Canarias hace cien años y qué cambios pedían para sus escuelas y sus pueblos?","Mural de noticias con forma de periódico antiguo",["mural","exposicion","prensa"],[2,5,7],0],"55":["Reformas educativas y culturales","Ainara De Luis Hernández",0,"¿Cómo era antes la escuela en Canarias y qué tuvo que cambiar para llegar a ser como la conocemos hoy?","Museo de la escuela canaria: ayer y hoy",["linea","museo"],[2,5,7],1],"56":["¿Por qué aumentaron las tensiones sociales y políticas en Canarias entre 1931 y 1936?","",2,"¿Por qué aumentaron las tensiones sociales y políticas en Canarias entre 1931 y 1936?","Mural de las tensiones de 1931 a 1936",["mural","exposicion"],[2,7],0],"57":["Tenerife cambia: ¿crecer siempre significa mejorar?","Sara Bramon Serrallonga",0,"¿Tenerife mejoró su calidad de vida al crecer tan rápidamente entre 1960 y 1990?","Tenerife, una isla que cambió",["mural","mapa","exposicion"],[2,5,7],1],"58":["El agua en Canarias: infraestructuras hidráulicas y gestión histórica","Daniela Meneses González",0,"¿Cómo ha conseguido Canarias obtener y gestionar el agua a lo largo de la historia?","Línea del tiempo del agua y exposición oral",["exposicion","linea"],[2,5,6,7],0],"61":["Canarias en julio de 1936: investigamos nuestro pasado","Aythami Pérez Cabrera",0,"","Museo de aula de julio de 1936",["mural","museo"],[2,5,7,9],0],"62":["Una guerra sin frente en Canarias","David Rodríguez Grajeda",1,"¿Cómo cambió la vida y la política en Canarias tras el golpe de estado del 18 de julio de 1936, y por qué se dice que en las islas hubo una guerra sin frente?","Mural de cartulinas sobre la guerra sin frente",["mural"],[2,5,7,9],0],"63":["Relaciones Iglesia-Estado en el marco del régimen franquista","Nerea Lorenzo Felipe",0,"¿Por qué durante años no pudimos elegir nuestros nombres, aprender en libertad o escuchar lo que queríamos en la radio, y qué tuvo que cambiar en la sociedad y en la Iglesia canaria para lograr nuestros derechos actuales?","Hoy somos guías de museo",["exposicion","museo"],[2,7,8,9],1],"64":["Las cartillas del hambre: ¿cómo sobrevivieron nuestras familias en la Canarias de posguerra?","Óscar Rivero García",0,"¿Cómo consiguieron las familias canarias alimentar a sus hijos e hijas durante la posguerra si la comida estaba estrictamente racionada por cupones oficiales?","Las cartillas del hambre: Sobrevivir en la Canarias de Posguerra",["mural"],[2,7],1],"65":["Voces del Atlántico","Daniel López Sosa",1,"¿Por qué los canarios y canarias arriesgaron su vida yendo a otros países como Venezuela tras la guerra civil?","Mural sobre la emigración canaria a Venezuela",["mural"],[2,7,8],0],"67":["¿Quién decide qué se debate? La Asamblea Pastoral de Canarias (1975)","Valeria Daganzo Castañeyra",0,"¿Qué pasa cuando a un grupo de personas no se le permite reunirse a hablar de sus problemas?","La asamblea de nuestra clase, Canarias en 1975",["mural","linea"],[2,5,7,8],1],"68":["Descubrimos cómo el turismo transformó Canarias (1936-1975)","Valeria Dorta Sardano",0,"¿Cómo y por qué el turismo transformó las ciudades y los paisajes costeros de Canarias entre 1936 y 1975?","Exposición: el turismo transforma Canarias (1936-1975)",["exposicion","mural"],[2,5,6,7],0],"69":["La fuerza del barrio y la calle: movimientos sociales en el tardofranquismo","Helena Ortiz Almenara",0,"¿Cómo consiguieron los vecinos, trabajadores y estudiantes de los años 70 transformar nuestros barrios y conquistar las libertades que disfrutamos hoy en Canarias?","Periódico histórico y exposición «La Memoria de los Barrios»",["prensa","mural","exposicion"],[2,7,8],1],"70":["Crecimiento poblacional","Martina Hernández Díaz",0,"¿Por qué muchos de nuestros abuelos y bisabuelos tuvieron que mudarse de pueblo, de isla o viajar en barco hasta Venezuela hace unos años?","Libro Vivo de la Memoria Canaria",["mural","mapa","prensa","libro"],[2,6,7],1],"71":["Canarias se transforma: la Transición política","",2,"¿Cómo pasó Canarias de vivir bajo una dictadura a pertenecer a una sociedad democrática?","Cartulina informativa sobre la Transición",["mural","exposicion"],[2,7,9],0],"72":["¿Sabes lo que ocurrió en 1982 en Canarias?","David González Llanos",0,"¿Por qué el 10 de agosto de 1982 cambió la organización de Canarias y cómo consiguió el Estatuto unir a las siete islas de entonces dentro de una misma Comunidad Autónoma?","Pasapalabra del proceso autonómico",["juego"],[2,7,9],0],"75":["Descubrimos el patrimonio de Canarias: una historia que está a nuestro alrededor","Julia García Toledo",0,"¿Qué es el patrimonio?","Campaña para cuidar el patrimonio del municipio",[],[2,5,7],0],"76":["Del campo a la costa canaria","Noelia Rodríguez Espinosa",0,"¿Cómo cambió nuestra forma de vivir, de trabajar y el paisaje de las islas cuando llegaron los primeros turistas en el siglo pasado, y por qué eso es importante para entender el lugar donde vivimos hoy?","El Cuaderno del Pasado al Presente",["libro"],[2,6,7],1],"77":["Canarias, una sociedad en cambio: migraciones y transformaciones","Asier Estévez Hernández",0,"¿Cómo han cambiado las migraciones en Canarias y de qué manera han transformado la sociedad de las islas?","Museo de aula: Canarias en cambio",["museo"],[2,7,8],1],"78":["La reforma del Estatuto de Autonomía de Canarias de 2018","Yumalay Herrera Armas",1,"¿Por qué las Islas Canarias necesitan un libro de reglas hecho a su medida y cómo nos ayuda la reforma del Estatuto a vivir mejor en nuestro archipiélago?","Las historias de nuestro autogobierno",["mapa","prensa","libro"],[2,7,9],1],"80":["La expansión universitaria en Canarias","Andrea Santana Trujillo",0,"¿Por qué los canarios antes tenían que marcharse fuera de las islas para ir a la universidad y cómo lograron tener sus propias universidades?","Estaciones expositivas sobre la expansión universitaria",["exposicion"],[2,7],0],"82":["Transformaciones del modelo turístico","Cristina Muñoz Castro",0,"¿Cómo cambió Canarias cuando empezaron a llegar cada vez más turistas?","Canarias y el turismo: un territorio que cambia",["mural","exposicion"],[2,6,7],1],"83":["Misión Canarias Sostenible: guardianes de nuestras islas","Leyre González Oliva",0,"¿Qué podemos hacer para que no se agoten el agua, la energía y la naturaleza de nuestras islas?","Informativo Canarias Verde",["audiovisual","prensa"],[1,2,5,6],1],"84":["La erupción volcánica de La Palma en Cumbre Vieja (2021)","Gabriel González Martín",0,"¿Qué pasó en La Palma durante 85 días?","Dosier del Plan de Reconstrucción",["libro","juego"],[2,5,6,7],0],"85":["La gestión de emergencias en Canarias","Samuel Rivero Toste",1,"¿Cómo aprendimos los canarios y las canarias a organizarnos para protegernos en equipo cuando la naturaleza nos pone a prueba?","Mural de los Guardianes del Archipiélago: Mapas e historias de Autoprotección",["mural","mapa"],[2,5,6,7],1],"86":["¿Todas las personas creen en lo mismo? Diversidad religiosa en Canarias","Teo Nadín Díaz García",0,"¿Todas las personas creen en lo mismo?","Mapa de la diversidad religiosa de Canarias",["mapa"],[2,5,7,8],0],"87":["¿Nos han vuelto los ordenadores e Internet menos aislados?","Daniel Santana Espino",0,"¿Nos han vuelto los ordenadores e Internet menos aislados en Canarias, o han creado nuevas diferencias entre las personas y las islas?","Exposición interactiva: Canarias en la era digital",["mural","exposicion"],[2,7],0],"88":["Cambios demográficos en Canarias (1880-1960)","Javier Escuela Rodríguez",0,"¿Cómo y por qué cambió la población de Canarias entre 1880 y 1960?","Así cambió la población de Canarias",["mural","mapa"],[2,7,8],1],"89":["Guardianes del territorio: ¿cómo cuidamos nuestras islas?","Paula Miranda Pascual",0,"¿Por qué en los últimos 25 años ha cambiado tanto el paisaje de Canarias y qué normas podemos acordar entre todos para vivir bien sin dañar nuestra tierra?","Guía del Buen Convivir: El Código de los Guardianes de Canarias",["mural","mapa","linea"],[2,6,7,9],1],"91":["¿Islas aisladas o conectadas?","Laura del Pilar Concepción de la Cruz",0,"¿Cómo ha influido el hecho de vivir en islas en la historia, la economía y la cultura de Canarias?","Mural de Canarias, entre el aislamiento y la conexión",["mural","mapa"],[2,5,7],0],"92":["Canarias, una economía mirando al exterior","",2,"","Canarias y su relación con el exterior",["mural","linea"],[2,6,7],1],"93":["Canarias, un territorio de ida y vuelta","Laura Morales Morales",0,"¿Cómo pasó Canarias de ser un territorio del que muchas personas emigraban a convertirse también en un lugar de llegada y tránsito de población?","Museo de las migraciones de Canarias: un territorio de ida y vuelta",["mapa","linea","museo"],[2,7,8],1],"95":["Gestión del agua como elemento organizador","Iker Rodríguez González",1,"¿Por qué el agua es como un tesoro escondido en Canarias y cómo logramos que salga por el grifo de nuestras casas sin agotarla para el futuro?","El viaje del agua en Canarias: pasado, presente y futuro",["mural","linea"],[2,5,6,7],1],"97":["Pluralidad cultural como rasgo estructural de Canarias","Gabriel Luis Marcos Gavilán",0,"¿La cultura canaria siempre ha sido igual o se ha construido a partir del contacto entre diferentes pueblos y culturas?","Museo de la pluralidad cultural de Canarias",["mapa","exposicion","linea","museo"],[2,5,7,8],0],"98":["Patrimonio histórico como recurso económico y cultural","Rafael Campos González",0,"¿Cómo podemos proteger y mostrar nuestra historia para atraer un turismo respetuoso que favorezca la economía, sin perder nuestras tradiciones y evitando que la masificación expulse a los vecinos de sus casas?","Plan estratégico de turismo cultural sostenible",["exposicion"],[2,5,6,7],0],"99":["Equilibrios interinsulares en Canarias (1808-1982)","Laia Genover Bassagañas",0,"¿Dos capitales y ocho islas?","Equilibrio Canario: el reto del Archipiélago",["juego"],[2,7,9],1],"100":["Continuidad y cambio en la identidad canaria","",2,"¿Por qué en un simple plato de puchero canario se esconden tres continentes distintos, y cómo nos explica esto quiénes somos en la actualidad?","Ruta Gastronómica Tricontinental",["audiovisual","guia"],[2,5,7,8],1]},"h":[["Vivir en islas",[1,2,39,83,84,85,87,89,91]],["Rutas atlánticas y puertos",[11,12,13,14,26,35,37,45,48,51,92]],["Economía y trabajo",[5,19,23,37,42,43,46,52,64,76,92]],["Migraciones y población",[3,29,47,65,70,77,88,93]],["El agua",[19,58,83,95]],["Iglesia y creencias",[8,9,14,22,28,32,36,42,44,63,67,86]],["Culturas e identidad",[4,6,9,13,20,24,33,36,97,100]],["Gobierno y territorio",[15,16,18,20,22,24,31,32,41,71,72,78,99]],["Sociedad, escuela y libertades",[23,40,50,54,55,56,61,62,63,64,67,69,71,80]],["Ciudad, turismo y patrimonio",[25,38,48,57,68,75,76,82,89,98]]],"pp":99,"isl":[["El Hierro",[[27.9,164.8],[29.4,165.0],[31.0,166.0],[32.3,167.2],[32.6,168.5],[32.0,170.2],[28.5,175.8],[28.5,176.3],[28.5,177.0],[28.5,177.6],[28.2,178.1],[27.9,178.5],[27.2,178.7],[26.9,179.0],[26.6,179.5],[26.3,180.0],[25.6,180.7],[25.0,181.4],[24.7,182.2],[24.7,184.6],[23.7,185.7],[22.5,185.7],[20.6,184.7],[19.3,183.2],[18.4,181.9],[17.4,180.8],[10.7,180.0],[9.2,179.2],[7.9,177.8],[7.3,174.3],[9.8,173.1],[13.3,173.4],[17.1,174.4],[18.4,173.4],[21.8,170.0],[22.5,169.2],[22.5,168.2],[22.8,167.7],[24.7,166.8],[27.9,164.8]],[20.0,200.0],"c"],["La Palma",[[43.4,68.2],[43.4,70.1],[44.0,72.4],[44.7,74.1],[46.6,75.1],[46.6,77.0],[44.0,80.0],[42.8,82.2],[43.4,84.3],[44.3,87.8],[43.7,89.7],[43.1,92.4],[41.2,95.1],[39.3,99.1],[37.7,102.5],[37.1,104.5],[36.4,104.5],[35.8,103.5],[33.9,102.5],[33.2,100.6],[32.6,95.6],[31.7,94.4],[31.0,92.9],[29.1,90.3],[28.5,88.1],[25.3,82.9],[25.0,80.4],[24.4,78.7],[24.1,77.2],[22.8,76.2],[21.8,75.0],[22.2,71.9],[24.7,68.7],[27.5,66.0],[29.8,64.5],[31.7,65.7],[33.9,65.9],[36.1,66.5],[39.6,65.0],[41.2,65.9],[42.8,67.0],[43.4,68.2]],[34.0,57.0],"c"],["La Gomera",[[82.7,129.3],[87.1,128.2],[91.3,129.5],[95.1,131.9],[99.8,135.4],[100.8,137.6],[101.4,140.0],[100.1,141.8],[98.2,143.0],[95.7,145.6],[93.8,146.9],[91.9,147.4],[89.7,148.1],[87.5,147.6],[82.7,144.7],[79.8,140.2],[79.8,136.6],[80.2,132.9],[82.7,129.3]],[90.0,163.0],"c"],["Tenerife",[[160.4,135.1],[159.4,136.8],[157.8,138.5],[152.1,144.2],[150.8,146.4],[149.9,147.6],[147.0,146.9],[142.3,148.8],[140.1,149.6],[138.5,150.3],[137.2,149.9],[136.3,148.6],[135.9,147.8],[136.3,146.6],[135.3,146.2],[134.7,145.6],[134.4,144.7],[134.0,142.9],[134.0,142.2],[132.8,140.7],[129.3,137.3],[128.7,135.6],[128.0,133.4],[126.8,131.9],[125.2,130.4],[124.5,129.2],[123.9,124.6],[123.6,123.8],[122.3,121.7],[121.1,119.6],[118.2,116.5],[117.6,114.5],[119.5,113.1],[124.2,110.9],[126.1,111.6],[128.0,113.1],[129.3,113.5],[130.2,113.3],[132.8,112.6],[134.7,111.6],[137.5,110.8],[139.8,109.9],[141.3,110.4],[144.8,110.1],[146.7,109.9],[148.3,108.4],[150.5,108.2],[151.5,107.7],[153.4,107.6],[155.3,106.2],[159.4,102.5],[161.0,101.0],[161.6,100.1],[161.9,98.6],[162.3,97.9],[163.8,97.1],[164.5,96.6],[166.1,95.7],[168.0,95.4],[169.5,94.7],[170.2,92.9],[171.8,93.4],[180.3,93.5],[185.7,91.7],[187.6,92.9],[187.0,95.6],[184.1,97.6],[177.8,101.1],[176.2,103.8],[174.3,105.7],[172.1,108.2],[169.5,110.3],[168.0,110.9],[166.7,112.0],[165.7,113.8],[165.7,115.8],[166.4,117.5],[166.7,118.5],[166.4,119.6],[165.4,120.2],[164.8,121.2],[164.2,123.4],[161.3,128.8],[160.4,133.2],[160.4,135.1]],[153.0,166.0],"c"],["Gran Canaria",[[251.6,146.9],[252.3,147.6],[253.9,148.4],[254.2,149.1],[253.9,150.6],[253.2,152.5],[252.9,154.2],[254.2,155.9],[254.2,156.5],[253.2,157.0],[252.6,157.9],[251.6,160.1],[252.6,161.4],[252.9,163.3],[252.9,164.8],[251.3,165.5],[250.4,166.2],[247.5,169.7],[246.3,170.9],[239.9,172.9],[239.0,173.4],[238.6,173.4],[236.4,176.1],[235.2,176.6],[234.2,176.1],[233.6,175.4],[232.6,174.9],[228.8,174.8],[227.2,174.3],[225.7,173.6],[220.9,169.5],[220.3,168.5],[219.9,167.8],[218.0,166.8],[217.4,166.2],[217.1,165.6],[214.2,159.9],[213.9,157.9],[214.2,155.9],[213.9,154.7],[213.9,153.2],[213.9,151.6],[214.2,150.5],[215.2,149.4],[218.7,147.6],[220.3,146.4],[222.2,144.4],[223.8,141.8],[223.4,139.5],[224.4,138.5],[224.7,136.8],[224.4,134.7],[224.1,133.2],[225.0,133.2],[226.0,133.2],[226.9,133.4],[227.6,133.9],[228.8,133.6],[233.6,135.3],[240.2,135.3],[245.6,136.6],[247.8,135.9],[247.5,132.6],[250.1,132.0],[250.4,132.2],[251.0,133.6],[251.0,134.2],[250.1,134.6],[249.4,135.9],[249.7,138.6],[250.1,142.5],[250.4,143.2],[250.7,144.4],[251.0,145.7],[251.6,146.9]],[234.0,192.0],"c"],["Fuerteventura",[[376.5,76.5],[380.0,75.0],[383.2,74.6],[386.0,75.6],[388.6,78.5],[389.5,81.9],[389.8,86.3],[389.2,94.9],[388.6,96.9],[387.3,100.8],[386.7,102.2],[386.7,105.4],[386.7,106.5],[387.0,107.2],[387.9,108.6],[387.9,109.3],[387.6,110.3],[386.0,111.8],[385.7,112.3],[385.7,113.3],[385.4,114.1],[385.1,115.2],[383.8,117.2],[382.9,118.9],[381.9,122.3],[380.0,125.6],[377.2,127.1],[367.7,128.7],[363.9,130.0],[360.7,132.0],[357.2,132.9],[355.6,133.9],[352.8,137.1],[350.2,140.3],[347.7,143.2],[343.9,144.9],[341.7,144.9],[338.2,143.4],[336.6,142.9],[330.6,143.2],[329.6,142.9],[329.9,142.5],[330.3,141.3],[330.6,140.2],[330.6,139.8],[331.2,139.6],[334.1,140.2],[336.0,140.0],[339.1,138.8],[344.2,136.6],[350.5,132.4],[353.1,129.9],[354.3,128.2],[355.3,126.5],[355.9,124.6],[356.6,119.6],[357.2,117.9],[359.1,114.8],[361.3,107.7],[362.0,106.5],[362.9,105.7],[365.4,101.3],[367.7,96.4],[371.1,91.2],[372.1,86.3],[373.4,83.2],[373.7,79.7],[374.3,78.3],[375.3,77.3],[376.5,76.5]],[360.0,160.0],"c"],["Lanzarote",[[419.6,26.0],[421.2,25.7],[422.8,26.7],[425.3,29.0],[424.7,31.1],[424.4,32.8],[423.8,34.1],[421.9,35.3],[421.5,36.8],[421.9,38.2],[422.2,39.5],[422.5,41.4],[422.2,42.0],[421.5,43.4],[421.2,44.2],[421.2,45.1],[421.2,46.8],[421.2,47.6],[420.0,50.0],[417.4,52.2],[414.6,53.9],[410.4,54.9],[409.5,55.7],[408.9,56.7],[407.6,57.2],[406.3,57.2],[404.4,57.7],[402.8,57.9],[399.7,58.6],[397.5,60.3],[395.6,63.0],[394.0,66.0],[393.6,66.0],[392.7,64.7],[390.8,64.2],[386.7,64.0],[386.0,63.5],[385.4,62.3],[385.1,61.1],[385.4,60.6],[386.4,60.3],[387.0,59.4],[387.9,57.9],[388.3,56.2],[388.6,51.3],[388.9,50.0],[392.1,45.3],[393.6,43.6],[394.6,42.6],[396.2,41.9],[397.8,41.5],[400.0,41.4],[401.6,40.9],[404.4,38.3],[406.3,37.3],[407.9,36.8],[409.2,36.6],[413.6,36.6],[414.9,36.1],[415.8,35.0],[417.1,32.6],[418.1,29.2],[418.7,27.5],[419.6,26.0]],[378.0,50.0],"e"],["La Graciosa",[[419.3,21.6],[420.3,23.3],[419.0,25.7],[416.8,27.4],[414.6,27.0],[414.6,26.3],[415.8,24.8],[416.8,22.6],[417.4,21.1],[419.3,21.6]],[408.0,21.0],"e"]],"isla":{"13":6,"14":6,"15":4,"51":4,"16":1,"84":1,"57":3,"72":3},"per":[["I","Formación y poblamiento antiguo","Poblamiento antiguo","orígenes"],["II","Contactos europeos y conquista","Conquista","siglos XIV–XV"],["III","Configuración de la sociedad atlántica","Sociedad atlántica","siglos XVI–XVII"],["IV","Siglo XVIII: reformas y cambios estructurales","Siglo XVIII",""],["V","Siglo XIX: liberalismo y economía de exportación","Siglo XIX",""],["VI","Primer tercio del siglo XX","1900–1936","1900–1936"],["VII","Guerra civil y franquismo","Guerra y franquismo","1936–1975"],["VIII","Democracia y autonomía","Democracia","desde 1975"],["IX","Siglo XXI","Siglo XXI",""],["X","Claves de larga duración","Larga duración",""]],"tipos":{"mural":"Mural o panel","mapa":"Mapa","exposicion":"Exposición o feria","linea":"Línea del tiempo","museo":"Museo de aula","prensa":"Prensa","audiovisual":"Vídeo, audio o pódcast","libro":"Libro, cómic o dosier","maqueta":"Maqueta","guia":"Ruta o guía","juego":"Juego","teatro":"Teatro o dramatización"},"f":{"m1":[[14,566,9440],[15,535,8805]],"m2":[[16,566,9521],[17,566,6007]],"m3":[[18,566,9297],[19,566,9160]],"m4":[[20,566,9091],[21,535,9291],[22,566,1490]],"m5":[[23,566,9091],[24,566,9216],[25,566,2176]],"m6":[[26,566,9372],[27,566,9216],[28,566,1490]],"m8":[[29,566,9490],[30,566,9415],[31,566,2381]],"m9":[[32,566,9166],[33,566,6699]],"m11":[[34,566,8961],[35,566,7715]],"m12":[[36,566,9091],[37,566,9216],[38,535,3596]],"m13":[[39,566,9372],[40,566,9141],[41,566,1490]],"m14":[[42,566,9440],[43,566,9422],[44,566,1976]],"m15":[[45,566,9372],[46,566,9210],[47,566,1490]],"m16":[[48,566,9372],[49,566,7914]],"m18":[[50,566,9054],[51,566,9415]],"m19":[[53,566,9372],[54,566,5883]],"m20":[[54,6130,9521],[55,566,9391],[56,566,6263]],"m22":[[57,566,9054],[58,566,9266],[59,566,3067]],"m23":[[60,566,9322],[61,566,6774]],"m24":[[62,566,9241],[63,566,7378]],"m25":[[64,566,9091],[65,566,9135],[66,566,2936]],"m26":[[67,566,9166],[68,566,9496],[69,566,2381]],"m28":[[70,566,9085],[71,566,9347],[72,566,3347]],"m29":[[73,566,9521],[74,566,7914]],"m31":[[75,566,9447],[76,566,8599]],"m32":[[77,566,9185],[78,566,9216],[79,566,3141]],"m33":[[80,566,9459],[81,566,9341],[82,566,3266]],"m35":[[83,566,9129],[84,566,9490]],"m36":[[86,566,9484],[87,566,9409],[88,566,9397],[89,535,3951]],"m37":[[90,566,9372],[91,566,7384]],"m38":[[92,566,9166],[93,566,6493]],"m39":[[94,566,9166],[95,566,9496],[96,566,1085]],"m40":[[97,566,9166],[98,566,9490],[99,566,1490]],"m41":[[100,566,9166],[101,566,7434]],"m42":[[102,566,9372],[103,566,9496],[104,566,1490]],"m43":[[105,566,9322],[106,566,5677]],"m44":[[106,5924,9515],[107,566,9366],[108,566,4562]],"m45":[[109,566,9447],[110,566,9285]],"m46":[[112,566,9166],[113,566,7509]],"m47":[[114,566,9372],[115,566,9422],[116,566,1976]],"m48":[[117,566,9366],[118,566,9004]],"m50":[[119,566,9297],[120,566,9366],[121,566,2581]],"m51":[[122,566,8886],[123,566,9347],[124,566,3347]],"m52":[[125,566,9521],[126,566,8120]],"m54":[[127,566,9447],[128,566,8805]],"m55":[[129,566,9166],[130,566,9366],[131,566,1085]],"m56":[[132,566,9372],[133,566,9496],[134,566,2381]],"m57":[[135,566,9372],[136,566,9010],[137,566,2176]],"m58":[[138,566,9241],[139,566,5478]],"m61":[[139,5719,9521],[140,566,9447],[141,566,4363]],"m62":[[142,566,9185],[143,566,9235]],"m63":[[144,566,9166],[145,566,6898]],"m64":[[146,566,9291],[147,535,9496],[148,566,1085]],"m65":[[149,566,9129],[150,566,7658]],"m67":[[151,566,9372],[152,566,8954]],"m68":[[153,566,9297],[154,566,9341],[155,566,3472]],"m69":[[156,566,9160],[157,566,9285]],"m70":[[159,566,9241],[160,566,7384]],"m71":[[161,566,9160],[162,566,5808]],"m72":[[163,566,9372],[164,566,9004]],"m75":[[165,566,9472],[166,566,2176]],"m76":[[167,566,9241],[168,566,9060]],"m77":[[169,566,9166],[170,566,9310],[171,566,3951]],"m78":[[172,566,9366],[173,566,9490]],"m80":[[175,566,9166],[176,566,8475]],"m82":[[177,566,9235],[178,566,8244]],"m83":[[179,566,9509],[180,566,4587]],"m84":[[180,4834,9459],[181,566,9422],[182,566,5677]],"m85":[[183,566,9091],[184,566,6493]],"m86":[[185,566,9372],[186,566,8525]],"m87":[[187,566,9490],[188,566,9210]],"m88":[[189,566,8967],[190,566,9422],[191,566,2581]],"m89":[[192,566,9166],[193,566,9459],[194,566,1490]],"m91":[[195,566,9091],[196,566,9422],[197,566,2992]],"m92":[[198,566,9372],[199,535,9285]],"m93":[[201,566,9372],[202,566,9347],[203,566,2786]],"m95":[[204,566,9372],[205,566,5478]],"m97":[[205,5719,9515],[206,566,9415],[207,566,5658]],"m98":[[208,566,9496],[209,566,9260]],"m99":[[211,566,9322],[212,566,4718]],"m100":[[213,566,9372],[214,566,9496],[215,566,1085]],"introduccion":[[2,566,8861],[3,566,7135]],"conclusion":[[216,566,8954]]},"r":1.29412,"secs":[["introduccion","Introducción general"],["conclusion","Conclusión final"]],"o":{"t":"Situaciones de aprendizaje para enseñar la Historia de Canarias","c":"Rivero González, J. P.","y":"2026","i":"Universidad de La Laguna","a":"Didáctica de las Ciencias Sociales I","u":"https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/situaciones-aprendizaje.html"}};
+/* D.s[n] = [título, autoría o '', estado (0 confirmada, 1 sin confirmar, 2 sin consignar), pregunta guía, producto final,
+             [tipos de producto], [competencias específicas], 1 si el nombre del producto es del documento]
+   D.f[clave] = tramos [página, arriba, abajo] en diezmilésimas de la altura de la página; D.r = alto / ancho */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const root = document.documentElement;
+root.lang = 'es';
+/* movimiento: encendido de entrada para todos; el botón del fondo lo apaga (y lo vuelve a encender) y se recuerda */
+let calm = false;
+try { calm = localStorage.getItem('sa-movimiento') === 'no'; } catch (e) {}
+root.classList.toggle('calma', calm);
+{ /* en móvil el buscador es estrecho: un marcador corto en vez de uno cortado */
+  const q = $('#q'), mq = matchMedia('(max-width: 520px)'), largo = q.placeholder;
+  const pon = () => { q.placeholder = mq.matches ? q.dataset.corto : largo; };
+  pon(); mq.addEventListener('change', pon);
+}
+const norm = s => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+const PEND = 1;
+const NS = Object.keys(D.s).map(Number).sort((a, b) => a - b);
+const has = n => Object.prototype.hasOwnProperty.call(D.s, n);
+const per = n => Math.ceil(n / 10);
+const step = (n, d) => { const i = NS.indexOf(n) + d; return i >= 0 && i < NS.length ? NS[i] : 0; };
+/* dirección pública para las citas: la configurada o, en GitHub Pages, la de la propia página */
+const BASE = D.o.u || (/\.github\.io$/.test(location.hostname) ? location.origin + location.pathname.replace(/index\.html$/, '') : '');
+if (BASE) $('#cite-col').append(' ' + BASE);
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('.copy');
+  if (!b) return;
+  const src = document.getElementById(b.dataset.copy), old = b.textContent;
+  const say = (t, ms) => { b.textContent = t; setTimeout(() => { b.textContent = old; }, ms); };
+  const pick = () => { const r = document.createRange(), s = getSelection(); r.selectNodeContents(src); s.removeAllRanges(); s.addRange(r); say('Cita seleccionada', 2400); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(src.textContent.trim()).then(() => say('Cita copiada', 1800), pick);
+  else pick();
+});
+
+const app = $('#app'), sheet = $('#sheet');
+let cielo = null;                                    /* el cielo de fondo; se crea más abajo */
+
+/* ───────── la matriz: cada casilla cuenta su situación; tema, producto y búsqueda encienden las suyas ───────── */
+const mx = $('#mx'), mxcap = $('#mxcap');
+const cells = new Map($$('#mx a.cell').map(a => [+a.dataset.n, a]));
+const F = { tema: 0, tipo: '', q: '' };
+const temasDe = new Map(NS.map(n => [n, D.h.map((h, k) => h[1].includes(n) ? k + 1 : 0).filter(Boolean)]));
+const hay = new Map(NS.map(n => { const s = D.s[n]; return [n, norm(`${n} ${s[0]} ${s[3]} ${s[1]} ${s[4]} ${s[5].map(k => D.tipos[k]).join(' ')} ${D.per[per(n) - 1][1]} ${temasDe.get(n).map(k => D.h[k - 1][0]).join(' ')}`)]; }));
+const chipsTipo = $$('.chip.tipo'), chipsTema = $$('.chip.tema');
+function contar(n) {
+  mxcap.textContent = '';
+  if (!n) {
+    mxcap.className = 'mx-cap vacio';
+    mxcap.append(el('span', 'h', matchMedia('(hover: none)').matches ? 'Pulsa una casilla para abrir su situación.' : 'Pasa por una casilla para ver su situación; púlsala para abrirla.'));
+    return;
+  }
+  const [t, a, e, q, prod] = D.s[n], p = D.per[per(n) - 1];
+  mxcap.className = 'mx-cap e' + per(n);
+  mxcap.append(el('span', 'n', n), el('span', 'p', `${p[0]} · ${p[1]}`), el('span', 't', t));
+  if (q) mxcap.append(el('span', 'q', q));
+  const pie = [a ? a + (e === PEND ? ' (sin confirmar)' : '') : 'Autoría no consignada', prod ? 'Producto final: ' + prod : ''].filter(Boolean).join(' · ');
+  if (pie) mxcap.append(el('span', 'a', pie));
+}
+function aplicar(scroll) {
+  const q = norm(F.q), activo = !!(F.tema || F.tipo || q);
+  let k = 0, uno = 0;
+  cells.forEach((a, n) => {
+    const ok = (!F.tema || temasDe.get(n).includes(F.tema)) && (!F.tipo || D.s[n][5].includes(F.tipo)) && (!q || hay.get(n).includes(q) || String(n) === q);
+    a.classList.toggle('on', activo && ok); if (ok) { k++; uno = uno || n; }
+  });
+  mx.classList.toggle('focus', activo);
+  const nf = (F.tema ? 1 : 0) + (F.tipo ? 1 : 0), caja = $('#filtros-box');
+  caja.classList.toggle('activos', nf > 0);
+  caja.querySelector('summary').textContent = nf ? `Filtros: ${[F.tema ? D.h[F.tema - 1][0] : '', F.tipo ? D.tipos[F.tipo] : ''].filter(Boolean).join(' · ')}` : 'Filtrar por tema o por producto final';
+  chipsTipo.forEach(c => c.setAttribute('aria-pressed', c.dataset.tipo === F.tipo ? 'true' : 'false'));
+  chipsTema.forEach(c => c.setAttribute('aria-pressed', +c.dataset.tema === F.tema ? 'true' : 'false'));
+  if (cielo) cielo.tema(F.tema);
+  const res = $('#res');
+  res.textContent = '';
+  const s = el('span');
+  if (activo) {
+    s.append(el('b', null, k), k === 1 ? ' situación' : ' situaciones');
+    if (F.tema) s.append(` del tema «${D.h[F.tema - 1][0]}»`);
+    if (F.tipo) s.append(` con ${D.tipos[F.tipo].toLowerCase()}`);
+    if (q) s.append(` que coinciden con «${F.q}»`);
+    if (!k) s.append('. Prueba a quitar algún filtro');
+  }
+  if (activo) res.append(s);                          /* sin filtros no hay recuento: la matriz ya lo muestra */
+  if (activo) {
+    const b = el('button', null, 'Ver todas'); b.type = 'button';
+    b.addEventListener('click', () => { F.tema = 0; F.tipo = ''; F.q = ''; $('#q').value = ''; aplicar(false); });
+    res.append(b);
+  }
+  if (activo && k === 1) contar(uno);
+  if (scroll) {
+    const r = mx.getBoundingClientRect();
+    if (r.top > innerHeight * .7 || r.bottom < 120) $('#matriz').scrollIntoView({ behavior: calm ? 'auto' : 'smooth' });
+  }
+}
+for (const [n, a] of cells) {
+  const on = () => { contar(n); if (cielo) cielo.resaltar(n); }, off = () => { if (cielo) cielo.resaltar(0); };
+  a.addEventListener('pointerenter', on); a.addEventListener('focus', on);
+  a.addEventListener('pointerleave', off); a.addEventListener('blur', off);
+}
+for (const a of $$('.au a')) {
+  const n = +a.getAttribute('href').slice(2);
+  a.addEventListener('pointerenter', () => { if (cielo) cielo.resaltar(n); });
+  a.addEventListener('pointerleave', () => { if (cielo) cielo.resaltar(0); });
+}
+chipsTipo.forEach(c => c.addEventListener('click', () => { F.tipo = F.tipo === c.dataset.tipo ? '' : c.dataset.tipo; aplicar(false); }));
+chipsTema.forEach(c => c.addEventListener('click', () => { F.tema = F.tema === +c.dataset.tema ? 0 : +c.dataset.tema; aplicar(false); }));
+let qT = 0;
+$('#q').addEventListener('input', e => { clearTimeout(qT); qT = setTimeout(() => { F.q = e.target.value.trim(); aplicar(true); }, 140); });
+$('#q').addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  e.preventDefault(); clearTimeout(qT); F.q = e.target.value.trim(); aplicar(true);
+  const first = [...cells.values()].find(a => a.classList.contains('on'));
+  if (first) first.focus({ preventScroll: true });
+});
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && sheet.hidden && !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) { e.preventDefault(); $('#q').focus(); }
+});
+contar(0);
+aplicar(false);
+
+/* ───────── el documento ───────── */
+const src = p => `paginas-situaciones-${Math.floor((p - 1) / D.pp) + 1}/s${String(p).padStart(3, '0')}.webp`;
+/* Si las imágenes se subieron sueltas a GitHub (sin su carpeta paginas-…), están en la raíz: se buscan allí.
+   La primera que aparece en un sitio decide dónde se piden las demás. */
+const enRaiz = s => s.replace(/^paginas-[a-z]+-\d+\//, '');
+let PLANO = false;
+const ruta = p => PLANO ? enRaiz(src(p)) : src(p);
+function cargar(img, p, fig) {
+  let otra = false;
+  img.addEventListener('load', () => { fig.classList.add('ready'); PLANO = !/^paginas-[a-z]+-\d+\//.test(img.getAttribute('src')); }, { once: true });
+  img.addEventListener('error', function fallo() {
+    if (!otra) { otra = true; img.src = PLANO ? src(p) : enRaiz(src(p)); return; }
+    img.removeEventListener('error', fallo); fig.classList.add('gone');
+  });
+  img.src = ruta(p);
+}
+const S = { key: null, n: 0, zoom: 1, pushed: false, origin: null };
+const host = $('#sh-doc'), info = $('#tb-info');
+function draw() {
+  const frag = D.f[S.key];
+  host.textContent = ''; info.textContent = '';
+  if (!frag || !frag.length) return;
+  const pad = parseFloat(getComputedStyle(host).paddingLeft) * 2;
+  const base = Math.round(Math.max(240, Math.min(host.clientWidth - pad, 880)) * S.zoom), H = base * D.r;
+  const stack = el('div', 'stack');
+  stack.style.width = base + 'px';
+  let prev = null;
+  for (const [p, a, b] of frag) {
+    const fig = el('figure', 'pg'), clip = el('div', 'clip'), img = new Image();
+    if (prev !== null && p !== prev) { fig.classList.add('brk'); fig.append(el('figcaption', null, 'pág. ' + p)); }
+    clip.style.height = (b - a) / 10000 * H + 'px';
+    img.alt = 'Página ' + p + ' del documento de la colección';
+    img.decoding = 'async';
+    img.style.cssText = `width:${base}px;height:${H}px;margin-top:${-a / 10000 * H}px`;
+    cargar(img, p, fig);
+    if (img.complete && img.naturalWidth) fig.classList.add('ready');
+    clip.append(img); fig.append(clip); stack.append(fig);
+    prev = p;
+  }
+  host.append(stack);
+  host.scrollTop = 0;
+  const ps = frag.map(t => t[0]);
+  info.textContent = ps[0] === ps[ps.length - 1] ? `Página ${ps[0]}` : `Páginas ${ps[0]}–${ps[ps.length - 1]}`;
+}
+function zoom(f) { S.zoom = Math.min(2.2, Math.max(.6, +(S.zoom * f).toFixed(2))); draw(); }
+$('#tb-in').addEventListener('click', () => zoom(1.2));
+$('#tb-out').addEventListener('click', () => zoom(1 / 1.2));
+const asked = new Set();
+function preload(key) {
+  const f = D.f[key];
+  if (!f || !f.length || asked.has(key)) return;
+  asked.add(key); new Image().src = ruta(f[0][0]);
+}
+for (const ev of ['pointerover', 'focusin']) document.addEventListener(ev, e => {
+  const a = e.target.closest && e.target.closest('a[href^="#m"]');
+  if (a) preload(a.getAttribute('href').slice(1));
+}, { passive: true });
+let rsT = 0, lastW = innerWidth;
+addEventListener('resize', () => { clearTimeout(rsT); rsT = setTimeout(() => { if (Math.abs(innerWidth - lastW) > 40) { lastW = innerWidth; if (!sheet.hidden) draw(); } }, 220); });
+
+/* ───────── abrir y cerrar el pliego ───────── */
+const valid = h => (/^m\d{1,3}$/.test(h) && has(+h.slice(1))) || D.secs.some(s => s[0] === h);
+const parseHash = () => { const h = location.hash.slice(1); return valid(h) ? h : null; };
+function fill(key) {
+  S.key = key;
+  const isM = /^m\d+$/.test(key), n = isM ? +key.slice(1) : 0;
+  S.n = n;
+  const nav = $('#sh-nav'), tp = $('#tb-prev'), tn = $('#tb-next');
+  nav.textContent = '';
+  for (const id of ['#sh-q', '#sh-p', '#sh-ce']) $(id).hidden = true;
+  $('#sh-citebox').hidden = !isM;
+  if (!isM) {
+    const s = D.secs.find(x => x[0] === key);
+    $('#sh-per').textContent = 'La colección';
+    $('#sh-num').textContent = '§';
+    $('#sh-title').textContent = s[1];
+    $('#sh-by').textContent = 'Edición docente. ' + D.o.i;
+    tp.hidden = tn.hidden = true;
+    document.title = `${s[1]} | Situaciones de aprendizaje`;
+    sheet.className = sheet.className.replace(/\be\d+\b/, 'e10');
+    draw();
+    return;
+  }
+  const p = D.per[per(n) - 1], [t, a, e, q, prod, tipos, ce, deDoc] = D.s[n];
+  $('#sh-per').textContent = `${p[0]}. ${p[1]}` + (p[3] ? `, ${p[3]}` : '');
+  $('#sh-num').textContent = n;
+  $('#sh-title').textContent = t;
+  $('#sh-by').textContent = a ? `Situación de aprendizaje de ${a}` + (e === PEND ? ' (atribución sin confirmar)' : '') : 'Situación de aprendizaje';
+  if (q) { $('#sh-qt').textContent = q; $('#sh-q').hidden = false; }
+  const pt = prod ? (deDoc ? `«${prod}»` : prod) + (tipos.length ? ` · ${tipos.map(k => D.tipos[k].toLowerCase()).join(' · ')}` : '') : tipos.map(k => D.tipos[k]).join(' · ');
+  if (pt) { $('#sh-pt').textContent = pt; $('#sh-p').hidden = false; }
+  $('#sh-pn').hidden = !prod || !!deDoc;
+  if (ce.length) {
+    const box = $('#sh-ce'); box.textContent = '';
+    box.append(el('b', null, 'Competencias'));
+    ce.forEach(c => box.append(el('span', null, 'CE' + c)));
+    box.hidden = false;
+  }
+  for (const [d, lab, btn] of [[-1, 'Anterior', tp], [1, 'Siguiente', tn]]) {
+    const j = step(n, d);
+    btn.hidden = !j;
+    if (!j) continue;
+    btn.href = '#m' + j;
+    const l = el('a'); l.href = '#m' + j;
+    l.append(el('small', null, lab), el('span', null, `${j}. ${D.s[j][0]}`));
+    nav.append(l);
+  }
+  const cite = $('#sh-cite');
+  cite.textContent = '';
+  cite.append((a && e !== PEND ? `${a} (${D.o.y}). «${t}». ` : `«${t}» (${D.o.y}). `) + `En ${D.o.c} (coord.), `, el('i', null, D.o.t),
+    ` (situación ${n}). ${D.o.i}.` + (BASE ? ` ${BASE}#m${n}` : ''));
+  preload('m' + step(n, 1));
+  document.title = `${n}. ${t} | Situaciones de aprendizaje`;
+  sheet.className = sheet.className.replace(/\be\d+\b/, 'e' + per(n));
+  draw();
+}
+let booted = false;
+/* abrir: si es una situación, el cielo viaja hasta su estrella y el pliego nace de su luz */
+function show(key, origin) {
+  if (S.viaje) return;
+  if (!key) { if (!sheet.hidden) hide(); return; }
+  if (!sheet.hidden) return fill(key);
+  S.origin = origin || document.activeElement;
+  const n = /^m\d+$/.test(key) ? +key.slice(1) : 0;
+  const open = () => {
+    sheet.hidden = false;
+    root.classList.add('sheet-open');
+    app.inert = true;
+    fill(key);
+    sheet.classList.remove('enter'); void sheet.offsetWidth; sheet.classList.add('enter');
+    dispatchEvent(new Event('pliego'));
+    $('#sh-close').focus({ preventScroll: true });
+  };
+  if (!booted) { if (cielo && n) cielo.fijar(n); open(); return; }
+  if (cielo && n && !calm) {
+    S.viaje = true;
+    cielo.viajar(n).then(() => {
+      if (parseHash() !== key) {                        /* el lector se echó atrás durante el viaje: se vuelve sin abrir */
+        cielo.volver(n, () => {}).then(() => { S.viaje = false; });
+        return;
+      }
+      S.viaje = false; open(); setTimeout(() => cielo.apagar(), 400);
+    });
+    return;
+  }
+  open();
+}
+/* cerrar: la luz de la estrella cubre el pliego, la cámara sale de ella y la página vuelve donde estaba */
+function hide() {
+  if (S.viaje) return;
+  const n = S.n;
+  const desdeMatriz = !S.origin || S.origin === document.body || !S.origin.closest || !!S.origin.closest('#mx');
+  const li = cells.get(n), visible = !!(desdeMatriz && li);
+  const back = (visible && li) || S.origin;
+  const close = () => {
+    sheet.hidden = true;
+    sheet.classList.remove('enter');
+    root.classList.remove('sheet-open');
+    app.inert = false;
+    host.textContent = '';
+    document.title = 'Situaciones de aprendizaje · Historia de Canarias';
+    if (visible) {
+      const r = li.getBoundingClientRect();
+      if (r.top < 60 || r.bottom > innerHeight) li.scrollIntoView({ block: 'center' });
+    }
+    dispatchEvent(new Event('pliego'));
+  };
+  const llegar = () => {
+    if (visible) { li.classList.remove('pulse'); void li.offsetWidth; li.classList.add('pulse'); contar(n); }
+    if (back && back.focus) back.focus({ preventScroll: true });
+  };
+  S.key = null; S.n = 0;
+  if (cielo && n) { S.viaje = true; cielo.volver(n, close).then(() => { S.viaje = false; llegar(); }); }
+  else { close(); llegar(); }
+}
+function go(key, origin) {
+  if (S.viaje) return;
+  const wasOpen = !sheet.hidden;
+  try {
+    if (wasOpen) history.replaceState({ k: key }, '', '#' + key);
+    else { history.pushState({ k: key }, '', '#' + key); S.pushed = true; }
+  } catch (e) {}
+  show(key, origin);
+}
+function leave() {
+  if (S.pushed) { S.pushed = false; history.back(); return; }
+  try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  hide();
+}
+function sync() {
+  const k = parseHash();
+  if (k === S.key || (!k && sheet.hidden)) return;
+  if (!k) S.pushed = false;
+  show(k);
+}
+addEventListener('popstate', sync);
+addEventListener('hashchange', sync);
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+  const h = a.getAttribute('href').slice(1);
+  if (!valid(h)) return;
+  e.preventDefault();
+  go(h, a);
+});
+$('#sh-close').addEventListener('click', leave);
+document.addEventListener('keydown', e => {
+  if (S.viaje && e.key === 'Escape' && S.pushed) { e.preventDefault(); S.pushed = false; history.back(); return; }
+  if (sheet.hidden) return;
+  if (e.key === 'Escape') { e.preventDefault(); leave(); }
+  else if ((e.key === 'ArrowLeft' || e.key === 'ArrowRight') && S.n && !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) {
+    const k = step(S.n, e.key === 'ArrowLeft' ? -1 : 1);
+    if (k) { e.preventDefault(); go('m' + k); }
+  }
+});
+
+/* ───────── el cielo de fondo: la constelación de las islas, detrás de la página. Al abrir una situación, la cámara
+   se vuelve hacia su estrella, entra en ella y el pliego nace de su luz; al cerrarlo, sale y la página reaparece. ───────── */
+try { cielo = (() => {
+  /* ───── la constelación de las islas: cada situación es una estrella en la costa de una isla; los diez temas,
+     estrellas sobre el mar. El mapa se inclina despacio; al abrir una situación, la cámara entra en su estrella. ───── */
+  const cv = $('#cielo'), ctx = cv && cv.getContext ? cv.getContext('2d') : null;
+  if (!ctx || !D.isl || !D.isl.length) return null;
+  let PIG = [], STAR = '', TXT = '', oscuro = false;
+  const leerColores = () => {
+    const css = getComputedStyle(root), cssv = k => css.getPropertyValue(k).trim();
+    PIG = Array.from({ length: 10 }, (_, i) => cssv('--e' + (i + 1)) || '#888888');
+    STAR = cssv('--star') || '#1D2327'; TXT = cssv('--ink') || '#1D2327';
+    const h = (cssv('--bg') || '#ffffff').replace('#', '');
+    oscuro = (.2126 * parseInt(h.slice(0, 2), 16) + .7152 * parseInt(h.slice(2, 4), 16) + .0722 * parseInt(h.slice(4, 6), 16)) / 255 < .35;
+  };
+  leerColores();
+  const destello = $('#destello'), pausa = $('#fondo-pausa');
+  let seed = 11;                                               /* azar con semilla: el mismo cielo en cada visita */
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const ease = t => 1 - Math.pow(1 - clamp(t), 3);
+  const easeIn = t => Math.pow(clamp(t), 3);
+  const easeIO = t => { t = clamp(t); return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+  const rgba = (hex, a) => { const h = hex.replace('#', ''); return `rgba(${parseInt(h.slice(0, 2), 16)},${parseInt(h.slice(2, 4), 16)},${parseInt(h.slice(4, 6), 16)},${clamp(a).toFixed(3)})`; };
+
+  /* ── el archipiélago en coordenadas del modelo: el mapa centrado, media anchura = 1, el norte hacia arriba ── */
+  const todos = D.isl.flatMap(i => i[1]);
+  const xs = todos.map(p => p[0]), ys = todos.map(p => p[1]);
+  const cx0 = (Math.min(...xs) + Math.max(...xs)) / 2, cy0 = (Math.min(...ys) + Math.max(...ys)) / 2, hw = (Math.max(...xs) - Math.min(...xs)) / 2;
+  const M = ([x, y], z = 0) => [(x - cx0) / hw, -(y - cy0) / hw, z];
+  const islas = D.isl.map(([nombre, pts, lab, anc], k) => {
+    const p = pts.map(q => M(q));
+    const tramos = p.map((a, i) => Math.hypot(p[(i + 1) % p.length][0] - a[0], p[(i + 1) % p.length][1] - a[1]));
+    return { k, nombre, costa: p.map(q => ({ p: q })), tramos, per: tramos.reduce((a, b) => a + b, 0), lab: { p: M(lab, 0) }, anc, plazas: [] };
+  });
+  /* plazas en la costa: tantas por isla como su perímetro pide, repartidas a la misma distancia */
+  const total = NS.length, sumaPer = islas.reduce((a, i) => a + i.per, 0);
+  islas.forEach(i => { i.cupo = Math.max(2, Math.round(total * i.per / sumaPer)); });
+  for (let dif = total - islas.reduce((a, i) => a + i.cupo, 0); dif !== 0; dif += dif > 0 ? -1 : 1) {
+    const i = islas.slice().sort((a, b) => dif > 0 ? b.per / b.cupo - a.per / a.cupo : a.per / a.cupo - b.per / b.cupo)[0];
+    i.cupo += dif > 0 ? 1 : -1;
+  }
+  islas.forEach(i => {
+    const paso = i.per / i.cupo;
+    let d = paso * .5, acc = 0, seg = 0;
+    for (let q = 0; q < i.cupo; q++, d += paso) {
+      while (acc + i.tramos[seg] < d) { acc += i.tramos[seg]; seg = (seg + 1) % i.costa.length; }
+      const t = (d - acc) / (i.tramos[seg] || 1), a = i.costa[seg].p, b = i.costa[(seg + 1) % i.costa.length].p;
+      i.plazas.push([a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, (rnd() - .5) * .05]);
+    }
+  });
+  /* quién va a cada plaza: primero las situaciones de una isla concreta; las demás, repartidas para que en cada isla
+     haya colores de varios periodos */
+  const sas = NS.map(n => ({ hub: false, n, b: per(n), hubs: [] }));
+  const byN = new Map(sas.map(s => [s.n, s]));
+  const libres = islas.map(i => i.plazas.map((_, q) => q));
+  const fija = D.isla || {};
+  for (const s of sas) if (fija[s.n] != null && libres[fija[s.n]].length) { s.isla = fija[s.n]; s.q = libres[s.isla].shift(); }
+  const resto = sas.filter(s => s.isla == null);
+  resto.forEach((s, j) => {
+    const i = islas.map((isla, k) => [k, libres[k].length / isla.cupo]).filter(x => libres[x[0]].length).sort((a, b) => b[1] - a[1])[0][0];
+    s.isla = i; s.q = libres[i].shift();
+  });
+  islas.forEach(i => { i.orden = sas.filter(s => s.isla === i.k).sort((a, b) => a.q - b.q); });
+  sas.forEach(s => { s.p = islas[s.isla].plazas[s.q]; });
+  /* los temas, estrellas sobre el mar del norte, entre las islas; un poco por encima del mapa */
+  const hubs = D.h.map(([nombre, ls], k) => {
+    const t = (k + .5) / D.h.length, x = -.52 + t * 1.04, y = .55 - .55 * Math.pow((t - .5) * 2, 2) * .9 + (k % 2 ? .08 : -.04);
+    return { hub: true, k, nombre, ls, p: [x, y, .14] };
+  });
+  const edges = [];
+  hubs.forEach(hb => { hb.ls = hb.ls.filter(n => byN.has(n)); hb.ls.forEach(n => { const s = byN.get(n); s.hubs.push(hb); edges.push([hb, s, rnd()]); }); });
+  const lazos = [];
+  for (let i = 0; i < hubs.length; i++) for (let j = i + 1; j < hubs.length; j++) {
+    const c = hubs[i].ls.filter(n => hubs[j].ls.includes(n)).length;
+    if (c) lazos.push([hubs[i], hubs[j], c]);
+  }
+  const all = [...hubs, ...sas];
+  all.forEach((nd, i) => { nd.i = i; nd.hl = 1; nd.ph = rnd() * 6.283; nd.tw = .6 + rnd() * 1.4; });
+  const recolorear = () => { leerColores(); sas.forEach(s => { s.col = PIG[s.b - 1]; }); for (const k in glow) delete glow[k]; };
+  sas.forEach(s => { s.col = PIG[s.b - 1]; });
+
+  const fondo = Array.from({ length: 260 }, () => ({ u: rnd(), v: rnd(), z: .2 + rnd() * .8, a: .12 + rnd() * .4, ph: rnd() * 6.283 }));
+  const glow = {};
+  const halo = col => glow[col] || (glow[col] = (() => {
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const g = c.getContext('2d'), gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gr.addColorStop(0, rgba(col, .95)); gr.addColorStop(.16, rgba(col, .5)); gr.addColorStop(.45, rgba(col, .12)); gr.addColorStop(1, rgba(col, 0));
+    g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return c;
+  })());
+
+  /* ── cámara: el mapa se inclina despacio; en el viaje se pone de frente, va a la estrella y entra en ella ── */
+  const CAM0 = 3.4, PITCH0 = -.5;
+  let W = 0, H = 0, gx = null, gy = 0, gr = 0, dpr = 1, yaw = 0, pitch = PITCH0, panX = 0, panY = 0, cam = CAM0, brillo = 1, girando = !calm;
+  let tema = null, marca = null, viaje = null, raf = 0, last = 0, impar = false, aparicion = calm ? 1 : 0, t0 = 0, reloj = 0;
+  let cy = 1, sy = 0, cp = 1, sp = 0;
+  /* en reposo: arriba, encima del título, como una portada */
+  const reposo = () => { const g = Math.min(W * .42, 340); return [W / 2, 54 + g * .62, g]; };
+  const enViaje = () => [W / 2, H / 2, Math.min(W * .42, H * .75)];
+  const medir = () => {
+    dpr = Math.min(1.5, devicePixelRatio || 1); W = innerWidth; H = innerHeight;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (gx === null) [gx, gy, gr] = reposo();
+  };
+  const proj = (nd, k = 1) => {
+    const x0 = nd.p[0] * k, y0 = nd.p[1] * k, z0 = nd.p[2];
+    const x = x0 * cy + z0 * sy, z = -x0 * sy + z0 * cy, y = y0 * cp - z * sp, z2 = y0 * sp + z * cp, dz = cam - z2;
+    nd.ok = dz > .015;
+    const s = CAM0 / Math.max(dz, .015);
+    nd.sx = gx + (x - panX) * gr * s; nd.sy = gy - (y - panY) * gr * s; nd.s = s; nd.z2 = z2;
+    nd.cerca = clamp((dz - .02) / .35);
+  };
+  const objetivoCam = nd => nd.p[2] + .06;
+  /* k = 0: cámara en su sitio; k = 1: junto a la estrella. La distancia se reduce en proporción constante */
+  const acercar = (nd, k) => nd.p[2] + (CAM0 - nd.p[2]) * Math.pow(.06 / (CAM0 - nd.p[2]), clamp(k));
+  const brilloScroll = () => {
+    const t = clamp(scrollY / (innerHeight * .8));
+    const m = clamp(scrollY / Math.min(W * .45, 380));
+    return oscuro ? 1 - .74 * m : .95 - .87 * m;
+  };
+
+  const brilloViaje = () => oscuro ? .62 : .7;
+
+  const pintar = now => {
+    const T = now / 1000;
+    cy = Math.cos(yaw); sy = Math.sin(yaw); cp = Math.cos(pitch); sp = Math.sin(pitch);
+    ctx.clearRect(0, 0, W, H);
+    const viajando = !!viaje, zoom = clamp((CAM0 - cam) / (CAM0 - .2));
+    /* estrellas lejanas */
+    const off = scrollY * .04;
+    for (const st of fondo) {
+      const x = ((st.u * W + yaw * 60 * st.z) % W + W) % W, y = ((st.v * H - off * st.z) % H + H) % H;
+      const a = st.a * (calm ? 1 : .75 + .25 * Math.sin(T * 1.3 + st.ph)) * (.55 + .45 * brillo) * (oscuro ? 1 : .45);
+      if (viajando && zoom > 0) {
+        const dx = x - W / 2, dy = y - H / 2, k = 1 + zoom * 1.6;
+        ctx.strokeStyle = rgba(TXT, a * .5); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(W / 2 + dx * (1 + zoom * .4), H / 2 + dy * (1 + zoom * .4)); ctx.lineTo(W / 2 + dx * k, H / 2 + dy * k); ctx.stroke();
+      } else { ctx.fillStyle = rgba(TXT, a); ctx.fillRect(x, y, st.z > .75 ? 1.4 : 1, st.z > .75 ? 1.4 : 1); }
+    }
+    const foco = viaje ? viaje.nd : tema, ap = aparicion;
+    for (const nd of all) proj(nd);
+    const B = brillo, apagar = viajando ? 1 - zoom : 1;
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    /* la costa real, muy tenue, y la constelación de cada isla: sus estrellas unidas en orden */
+    for (const i of islas) {
+      const dib = clamp(ap * 1.4 - i.k * .06);
+      if (dib <= 0) continue;
+      ctx.beginPath();
+      i.costa.forEach((c, q) => { proj(c); if (q) ctx.lineTo(c.sx, c.sy); else ctx.moveTo(c.sx, c.sy); });
+      ctx.closePath();
+      ctx.fillStyle = rgba(TXT, (oscuro ? .035 : .03) * B * dib * apagar); ctx.fill();
+      ctx.strokeStyle = rgba(TXT, (oscuro ? .1 : .12) * B * dib * apagar); ctx.lineWidth = .7; ctx.stroke();
+      const o = i.orden, nlin = Math.floor(o.length * clamp(dib * 1.2));
+      ctx.strokeStyle = rgba(TXT, (foco && !viajando ? .06 : oscuro ? .3 : .28) * B * apagar); ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let q = 0; q < nlin; q++) { const a = o[q], b = o[(q + 1) % o.length]; if (!a.ok || !b.ok) continue; ctx.moveTo(a.sx, a.sy); ctx.lineTo(b.sx, b.sy); }
+      ctx.stroke();
+    }
+    ctx.globalCompositeOperation = oscuro ? 'lighter' : 'source-over';
+    const HALO = oscuro ? 1 : .32;
+    /* los temas, enlazados entre sí cuando comparten situaciones */
+    for (const l of lazos) {
+      if (!l[0].ok || !l[1].ok) continue;
+      const on = tema && !viajando && (l[0] === tema || l[1] === tema);
+      const a = (tema ? (on ? .3 : .02) : .07) * B * ap * apagar;
+      if (a < .004) continue;
+      ctx.setLineDash(on ? [] : [2, 5]); ctx.lineWidth = .7 + l[2] * .15; ctx.strokeStyle = rgba(STAR, a);
+      ctx.beginPath(); ctx.moveTo(l[0].sx, l[0].sy); ctx.lineTo(l[1].sx, l[1].sy); ctx.stroke();
+    }
+    ctx.setLineDash([]);
+    /* hilos de un tema (o de la situación del viaje) a sus estrellas en las islas */
+    for (const [hb, s, ph] of edges) {
+      const on = foco && (foco === hb || foco === s);
+      if (!on || !hb.ok || !s.ok) continue;
+      const a = (viajando ? .4 : .55) * B * apagar;
+      const g = ctx.createLinearGradient(hb.sx, hb.sy, s.sx, s.sy); g.addColorStop(0, rgba(STAR, a)); g.addColorStop(1, rgba(s.col, a));
+      ctx.strokeStyle = g; ctx.lineWidth = 1.1;
+      ctx.beginPath(); ctx.moveTo(hb.sx, hb.sy); ctx.lineTo(s.sx, s.sy); ctx.stroke();
+      if (!calm && !viajando) { const t = (T * .45 + ph) % 1, z = 6; ctx.drawImage(halo(t < .5 ? STAR : s.col), hb.sx + (s.sx - hb.sx) * t - z, hb.sy + (s.sy - hb.sy) * t - z, z * 2, z * 2); }
+    }
+    /* estrellas */
+    for (const nd of all) {
+      if (!nd.ok) { nd.psx = null; continue; }
+      const meta = viaje && nd === viaje.nd;
+      const aparece = nd.hub ? clamp(ap * 2 - 1) : clamp(ap * 1.6 - (islas[nd.isla].k * .06 + nd.q * .012));
+      const tw = calm ? 1 : .82 + .18 * Math.sin(T * nd.tw + nd.ph);
+      const lit = foco && !meta && !viajando ? .12 + .88 * nd.hl : 1, boost = (foco && nd.hl > .5) || nd === marca ? 1.35 : 1;
+      const a = lit * B * aparece * (meta ? 1 : nd.cerca) * (nd.hub && !tema && !viajando ? .55 : 1);
+      if (a < .01) { nd.psx = null; continue; }
+      const sc = Math.min(nd.s, meta ? 36 : 14) * boost;
+      if (viajando && nd.psx != null && !meta && zoom > .02) {
+        ctx.strokeStyle = rgba(nd.hub ? STAR : nd.col, a * .45); ctx.lineWidth = Math.min(3.5, Math.max(1, .8 * sc));
+        ctx.beginPath(); ctx.moveTo(nd.psx, nd.psy); ctx.lineTo(nd.sx, nd.sy); ctx.stroke();
+      }
+      nd.psx = nd.sx; nd.psy = nd.sy;
+      if (nd.hub) {
+        const z = (16 + 3 * Math.sin(T * .9 + nd.ph)) * sc;
+        ctx.globalAlpha = a * (oscuro ? 1 : .18); ctx.drawImage(halo(STAR), nd.sx - z, nd.sy - z, z * 2, z * 2);
+        const sp2 = 8 * sc;
+        ctx.globalAlpha = 1; ctx.strokeStyle = rgba(STAR, a * (oscuro ? .5 : .75)); ctx.lineWidth = .8;
+        ctx.beginPath(); ctx.moveTo(nd.sx - sp2, nd.sy); ctx.lineTo(nd.sx + sp2, nd.sy); ctx.moveTo(nd.sx, nd.sy - sp2); ctx.lineTo(nd.sx, nd.sy + sp2); ctx.stroke();
+        ctx.fillStyle = rgba(oscuro ? '#FFFFFF' : STAR, a); ctx.beginPath(); ctx.arc(nd.sx, nd.sy, 2 * sc, 0, 6.283); ctx.fill();
+      } else {
+        const z = 9.5 * sc * tw;
+        /* la estrella de destino crece sin quemarse: al acercarse, su halo se suaviza y no se suma en blanco */
+        if (meta) ctx.globalCompositeOperation = 'source-over';
+        ctx.globalAlpha = a * HALO * (meta ? 1 - .5 * zoom : 1); ctx.drawImage(halo(nd.col), nd.sx - z, nd.sy - z, z * 2, z * 2);
+        ctx.globalAlpha = 1; ctx.fillStyle = rgba(nd.col, a * (meta ? 1 - .85 * zoom : 1)); ctx.beginPath(); ctx.arc(nd.sx, nd.sy, 2.1 * sc, 0, 6.283); ctx.fill();
+        if (meta) ctx.globalCompositeOperation = oscuro ? 'lighter' : 'source-over';
+        if (nd === marca && !viajando) { ctx.strokeStyle = rgba(nd.col, .85); ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(nd.sx, nd.sy, 7 * sc, 0, 6.283); ctx.stroke(); }
+      }
+    }
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+    /* nombres: las islas, como en el mapa de los 100 momentos; el tema filtrado, junto a su estrella */
+    if (!viajando) {
+      const pequeno = W < 600;
+      ctx.textBaseline = 'middle';
+      ctx.font = `italic 400 ${pequeno ? 12 : 14}px 'Ibarra Real Nova', Georgia, serif`;
+      const ai = clamp(ap * 1.5 - .4) * (tema ? .35 : 1) * clamp((B - .3) / .5) * (oscuro ? .75 : .62);
+      if (ai > .02) for (const i of islas) {
+        proj(i.lab); ctx.fillStyle = rgba(TXT, ai); ctx.textAlign = i.anc === 'e' ? 'right' : 'center';
+        ctx.fillText(i.nombre, i.lab.sx, i.lab.sy);
+      }
+      if (tema && tema.ok) {
+        ctx.font = `italic 500 ${pequeno ? 14 : 16}px 'Ibarra Real Nova', Georgia, serif`;
+        const w = ctx.measureText(tema.nombre).width, izq = tema.sx + 14 + w > W - 10;
+        ctx.textAlign = izq ? 'right' : 'left'; ctx.fillStyle = rgba(TXT, .9 * clamp(B + .3));
+        ctx.fillText(tema.nombre, izq ? tema.sx - 14 : tema.sx + 14, tema.sy - 1);
+      }
+    }
+  };
+
+  /* ── un paso de la animación ── */
+  const paso = (dt, now) => {
+    if (!t0) t0 = now;
+    if (!calm) aparicion = clamp((now - t0) / 2600);
+    let ocupado = aparicion < 1;
+    if (girando && !calm) reloj += dt;
+    if (viaje) {
+      const v = viaje, t = now - v.t0;
+      if (v.ida) {
+        const k = easeIO(t / 700);
+        yaw = v.yaw0 * (1 - k); pitch = v.pitch0 * (1 - k);
+        panX = v.nd.p[0] * k; panY = v.nd.p[1] * k;
+        cam = acercar(v.nd, easeIO((t - 420) / 860));
+        /* el cielo se aclara poco y despacio: lo justo para leer el mapa sin la página delante */
+        const bv = brilloViaje();
+        if (brillo < bv) brillo += (bv - brillo) * (1 - Math.pow(.12, dt));
+        if (t > 960 && !v.luz) { v.luz = true; destello.style.setProperty('--c', v.nd.col); destello.classList.add('on'); }
+        if (t > 1260) { viaje = null; v.fin(); }
+      } else {
+        cam = acercar(v.nd, 1 - ease(t / 1100));
+        if (t > 380 && !v.pagina) { v.pagina = true; root.classList.remove('viajando'); }
+        if (t > 1150) { cam = CAM0; viaje = null; v.fin(); }
+      }
+      ocupado = true;
+    } else if (cam === CAM0) {
+      /* en reposo: el mapa se balancea despacio y vuelve a su sitio */
+      const ty = calm ? 0 : .3 * Math.sin(reloj * .13), tp = PITCH0 + (calm ? 0 : .07 * Math.sin(reloj * .09)), k = 1 - Math.pow(.25, dt);
+      yaw += (ty - yaw) * k; pitch += (tp - pitch) * k; panX += (0 - panX) * k; panY += (0 - panY) * k;
+      if (Math.abs(panX) + Math.abs(panY) > .001) ocupado = true;
+      const meta = brilloScroll();
+      brillo += (meta - brillo) * (1 - Math.pow(.02, dt));
+      if (Math.abs(meta - brillo) > .005) ocupado = true;
+    }
+    const [tx, ty2, tr] = viaje ? enViaje() : reposo(), kg = calm && !viaje ? 1 : 1 - Math.pow(.003, dt);
+    if (Math.abs(tx - gx) + Math.abs(ty2 - gy) + Math.abs(tr - gr) > .4) { gx += (tx - gx) * kg; gy += (ty2 - gy) * kg; gr += (tr - gr) * kg; ocupado = true; }
+    else { gx = tx; gy = ty2; gr = tr; }
+    const f = viaje ? viaje.nd : tema, k2 = calm ? 1 : 1 - Math.pow(.004, dt);
+    for (const nd of all) {
+      const tgt = !f || nd === f || (f.hub ? (!nd.hub && nd.hubs.includes(f)) : (nd.hub && f.hubs.includes(nd))) ? 1 : 0, d = tgt - nd.hl;
+      if (Math.abs(d) > .004) { nd.hl += d * k2; ocupado = true; } else nd.hl = tgt;
+    }
+    return ocupado || (girando && !calm);
+  };
+  const vivo = () => !document.hidden && (sheet.hidden || !!viaje);
+  const bucle = now => {
+    raf = 0;
+    if (!vivo()) { last = 0; return; }
+    const dt = Math.min(.05, last ? (now - last) / 1000 : .016); last = now;
+    const sigue = paso(dt, now);
+    impar = !impar;
+    if (viaje || aparicion < 1 || impar || !girando) pintar(now);                /* en reposo basta con 30 imágenes por segundo */
+    if (sigue) raf = requestAnimationFrame(bucle); else last = 0;
+  };
+  const kick = () => { if (!raf && vivo()) raf = requestAnimationFrame(bucle); };
+  medir();
+  addEventListener('resize', () => { medir(); pintar(performance.now()); kick(); });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { recolorear(); brillo = brilloScroll(); pintar(performance.now()); kick(); });
+  addEventListener('scroll', kick, { passive: true });
+  document.addEventListener('visibilitychange', kick);
+  addEventListener('pliego', kick);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(kick);
+  if (pausa) {
+    const pon = () => {
+      const t = calm ? 'Activar la animación' : 'Detener la animación';
+      pausa.dataset.on = !calm; pausa.setAttribute('aria-label', t); pausa.title = t; root.classList.toggle('calma', calm);
+    };
+    pon();
+    pausa.addEventListener('click', () => {
+      calm = !calm; girando = !calm;
+      try { localStorage.setItem('sa-movimiento', calm ? 'no' : 'si'); } catch (e) {}
+      pon(); kick();
+    });
+  }
+  brillo = brilloScroll();
+  kick();
+
+  const ponerDentro = nd => { yaw = 0; pitch = 0; panX = nd.p[0]; panY = nd.p[1]; cam = objetivoCam(nd); brillo = brilloViaje(); aparicion = 1; [gx, gy, gr] = enViaje(); };
+  return {
+    resaltar(n) { const nd = n ? byN.get(n) || null : null; if (nd !== marca) { marca = nd; kick(); } },
+    tema(k) { tema = k ? hubs[k - 1] || null : null; kick(); },
+    /* ida: el mapa se pone de frente, la cámara va a la estrella, entra en ella y se enciende su luz */
+    viajar(n) {
+      const nd = byN.get(n);
+      return new Promise(fin => {
+        if (!nd) { fin(); return; }
+        marca = null; root.classList.add('viajando');
+        viaje = { ida: true, nd, t0: performance.now(), yaw0: yaw, pitch0: pitch, fin };
+        all.forEach(x => { x.psx = null; });
+        kick();
+      });
+    },
+    /* el pliego ya está abierto (enlace directo): la cámara espera dentro de su estrella */
+    fijar(n) { const nd = byN.get(n); if (!nd || calm) return; ponerDentro(nd); root.classList.add('viajando'); },
+    /* vuelta: la luz cubre el pliego, se cierra y la cámara sale; la página reaparece */
+    volver(n, cerrar) {
+      const nd = byN.get(n);
+      return new Promise(fin => {
+        if (!nd || calm || !root.classList.contains('viajando')) { cerrar(); root.classList.remove('viajando'); cam = CAM0; fin(); kick(); return; }
+        ponerDentro(nd);
+        destello.style.setProperty('--c', nd.col); destello.classList.add('fijo', 'on');
+        cerrar();
+        requestAnimationFrame(() => { destello.classList.remove('fijo', 'on'); });
+        all.forEach(x => { x.psx = null; });
+        viaje = { ida: false, nd, t0: performance.now(), fin };
+        kick();
+      });
+    },
+    apagar() { destello.classList.remove('on'); },
+  };
+})(); } catch (e) { cielo = null; console.error('El cielo de fondo no ha podido arrancar:', e); }
+const first = parseHash();
+if (first) show(first);
+booted = true;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Historia de Canarias · 100 momentos y situaciones de aprendizaje</title>
+<meta name="description" content="Dos obras colectivas del alumnado de Didáctica de las Ciencias Sociales I (Universidad de La Laguna): 100 momentos de Historia de Canarias y 81 situaciones de aprendizaje para enseñarla en Educación Primaria.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2315191C'/><rect x='5.0' y='9' width='1.6' height='14' fill='%23D99B72'/><rect x='7.2' y='9' width='1.6' height='14' fill='%23EA7584'/><rect x='9.4' y='9' width='1.6' height='14' fill='%2363B7CE'/><rect x='11.6' y='9' width='1.6' height='14' fill='%23D9B454'/><rect x='13.8' y='9' width='1.6' height='14' fill='%23EF79A8'/><rect x='16.0' y='9' width='1.6' height='14' fill='%238FCB81'/><rect x='18.2' y='9' width='1.6' height='14' fill='%23A9B3BC'/><rect x='20.4' y='9' width='1.6' height='14' fill='%2384ABF0'/><rect x='22.6' y='9' width='1.6' height='14' fill='%23BBA1EA'/><rect x='24.8' y='9' width='1.6' height='14' fill='%23D3D9DD'/></svg>">
+<meta name="theme-color" content="#FBFBF9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15191C" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Historia de Canarias · 100 momentos y situaciones de aprendizaje">
+<meta property="og:description" content="Dos obras colectivas del alumnado de Didáctica de las Ciencias Sociales I (Universidad de La Laguna): 100 momentos de Historia de Canarias y 81 situaciones de aprendizaje para enseñarla en Educación Primaria.">
+<link rel="canonical" href="https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/">
+<meta property="og:url" content="https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/">
+<meta property="og:image" content="https://juanpedrorivero-cmd.github.io/100-momentos-canarias-y-situaciones-aprendizaje/social.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,400&amp;display=swap">
+<style>
+/* Portada de las dos obras de la asignatura. Misma familia que las dos webs: cal y basalto, diez pigmentos,
+   Ibarra Real Nova para títulos y Archivo para controles. De noche (modo oscuro del sistema), basalto. */
+:root {
+  --bg: #FBFBF9; --surface: #FFFFFF; --ink: #1D2327; --muted: #5C666D; --line: #D8DCD9; --shadow: rgba(29, 35, 39, .16);
+  --e1: #8C4A2B; --e2: #9B1B30; --e3: #17607A; --e4: #86610E; --e5: #B0245C;
+  --e6: #3F7A35; --e7: #4A535C; --e8: #2B55A6; --e9: #6D4BA3; --e10: #23292E;
+  --f-display: 'Ibarra Real Nova', 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  --f-text: Archivo, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15191C; --surface: #1E2428; --ink: #ECEEEA; --muted: #9AA3A8; --line: #323B41; --shadow: rgba(0, 0, 0, .55);
+    --e1: #D99B72; --e2: #EA7584; --e3: #63B7CE; --e4: #D9B454; --e5: #EF79A8;
+    --e6: #8FCB81; --e7: #A9B3BC; --e8: #84ABF0; --e9: #BBA1EA; --e10: #D3D9DD;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15191C; --surface: #1E2428; --ink: #ECEEEA; --muted: #9AA3A8; --line: #323B41; --shadow: rgba(0, 0, 0, .55);
+  --e1: #D99B72; --e2: #EA7584; --e3: #63B7CE; --e4: #D9B454; --e5: #EF79A8;
+  --e6: #8FCB81; --e7: #A9B3BC; --e8: #84ABF0; --e9: #BBA1EA; --e10: #D3D9DD;
+  color-scheme: dark;
+}
+@view-transition { navigation: auto }
+*, *::before, *::after { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100% }
+body { margin: 0; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; background: var(--bg); color: var(--ink);
+  font: 400 1rem/1.5 var(--f-text); -webkit-font-smoothing: antialiased; border-top: 2px solid var(--e1);
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px) }
+a { color: inherit }
+:focus-visible { outline: 2px solid var(--e8); outline-offset: 3px }
+
+main { flex: 1; width: 100%; max-width: 74rem; margin: 0 auto; padding: clamp(1.6rem, 4.5vh, 3.4rem) var(--gutter) 2.2rem }
+.cab { text-align: center; max-width: 44rem; margin: 0 auto clamp(1.5rem, 4vh, 2.5rem) }
+.ante { margin: 0 0 1rem; font: 600 .74rem/1.4 var(--f-text); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+h1 { margin: 0; font: 400 clamp(2.4rem, 5.4vw, 3.9rem)/1 var(--f-display); letter-spacing: -.012em }
+.sub { margin: .45rem 0 0; font: italic 400 clamp(1.2rem, 2.4vw, 1.6rem)/1.25 var(--f-display); color: var(--muted) }
+.lede { margin: 1.1rem auto 0; max-width: 40rem; font: 400 clamp(1.04rem, 1.5vw, 1.14rem)/1.58 var(--f-display); text-wrap: pretty }
+
+/* ── las dos obras ── */
+.obras { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem) }
+.obra {
+  --c: var(--e1);
+  position: relative; display: flex; flex-direction: column; min-width: 0; padding: clamp(1.25rem, 2.6vw, 2rem);
+  background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--c); border-radius: 3px;
+  text-decoration: none; color: inherit;
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s ease, border-color .35s ease;
+}
+.obra.sa { --c: var(--e8) }
+.obra:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px var(--shadow); border-color: color-mix(in srgb, var(--c) 45%, var(--line)); border-top-color: var(--c) }
+.obra:active { transform: translateY(-1px) }
+.fase { font: 600 .72rem/1.3 var(--f-text); letter-spacing: .12em; text-transform: uppercase; color: var(--c) }
+.fig { margin: .7rem 0 .6rem; aspect-ratio: 458 / 196; display: grid; place-items: center }
+.fig svg { width: 100%; height: 100%; overflow: visible }
+.obra h2 { margin: .55rem 0 0; font: 400 clamp(1.4rem, 2.1vw, 1.75rem)/1.12 var(--f-display) }
+.obra h2 em { display: block; font-style: italic; font-size: .72em; color: var(--muted); margin-top: .2rem }
+.obra p { margin: .6rem 0 0; color: var(--muted); line-height: 1.52; text-wrap: pretty }
+.cifras { margin-top: .75rem; font: 500 .82rem/1.4 var(--f-text); color: var(--ink) }
+.cifras b { font: 400 1.05rem/1 var(--f-display); color: var(--c) }
+.entrar { margin-top: auto; padding-top: 1.1rem; display: inline-flex; align-items: center; gap: .55rem; font: 600 .95rem/1 var(--f-text); color: var(--c) }
+.entrar svg { width: 1.1rem; height: 1.1rem; transition: transform .35s cubic-bezier(.2, .7, .2, 1) }
+.obra:hover .entrar svg { transform: translateX(5px) }
+.entrar span { border-bottom: 1px solid transparent; transition: border-color .3s }
+.obra:hover .entrar span { border-color: currentColor }
+
+/* mapa macizo */
+.mapa path { fill: var(--ink); transition: fill .45s ease; animation: sube .9s cubic-bezier(.2, .7, .2, 1) both }
+.obra:hover .mapa path { fill: var(--c) }
+.fig text { font: italic 400 12.5px var(--f-display); fill: var(--muted) }
+.fila { min-height: 1.35rem; display: flex; align-items: center }
+.regla { flex: 1; display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; height: 6px }
+.regla i { border-radius: 1px; transform-origin: left; animation: crece .6s cubic-bezier(.2, .7, .2, 1) both }
+.regla .b1 { background: var(--e1); animation-delay: 0.30s }
+.regla .b2 { background: var(--e2); animation-delay: 0.35s }
+.regla .b3 { background: var(--e3); animation-delay: 0.40s }
+.regla .b4 { background: var(--e4); animation-delay: 0.45s }
+.regla .b5 { background: var(--e5); animation-delay: 0.50s }
+.regla .b6 { background: var(--e6); animation-delay: 0.55s }
+.regla .b7 { background: var(--e7); animation-delay: 0.60s }
+.regla .b8 { background: var(--e8); animation-delay: 0.65s }
+.regla .b9 { background: var(--e9); animation-delay: 0.70s }
+.regla .b10 { background: var(--e10); animation-delay: 0.75s }
+
+/* constelación */
+.cielo .hilo { fill: none; stroke: var(--ink); stroke-opacity: .28; stroke-width: .55; stroke-dasharray: var(--len); stroke-dashoffset: var(--len);
+  animation: traza 1.6s cubic-bezier(.4, .1, .2, 1) forwards; animation-delay: calc(var(--d) + .2s); transition: stroke-opacity .4s }
+.obra:hover .cielo .hilo { stroke-opacity: .55 }
+.cielo circle { transform-box: fill-box; transform-origin: center; animation: punto .5s cubic-bezier(.2, .9, .3, 1.4) both;
+  animation-delay: calc(var(--i) * 12ms + .35s); transition: transform .35s ease }
+.obra:hover .cielo circle { transform: scale(1.3) }
+.cielo .c1 { fill: var(--e1) }
+.cielo .c2 { fill: var(--e2) }
+.cielo .c3 { fill: var(--e3) }
+.cielo .c4 { fill: var(--e4) }
+.cielo .c5 { fill: var(--e5) }
+.cielo .c6 { fill: var(--e6) }
+.cielo .c7 { fill: var(--e7) }
+.cielo .c8 { fill: var(--e8) }
+.cielo .c9 { fill: var(--e9) }
+.cielo .c10 { fill: var(--e10) }
+.cielo .tema { fill: var(--ink); opacity: .8; animation: titila 4.2s ease-in-out infinite; animation-delay: calc(var(--j) * -.43s) }
+.cielo .enlace { stroke: var(--ink); stroke-opacity: .16; stroke-width: .5; stroke-dasharray: 1.5 2.2 }
+.pasos { flex-wrap: wrap; gap: .25rem .9rem; font: 500 .8rem/1.3 var(--f-text) }
+.pasos em { font: italic 400 .95rem/1 var(--f-display); color: var(--c); margin-right: .2rem }
+
+/* el paso de una obra a la otra */
+.puente { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1; width: 2.6rem; height: 2.6rem;
+  display: grid; place-items: center; border-radius: 50%; background: var(--bg); border: 1px solid var(--line); color: var(--muted); pointer-events: none }
+.puente svg { width: 1.1rem; height: 1.1rem }
+.relacion { margin: 1.6rem auto 0; max-width: 40rem; text-align: center; font: italic 400 1rem/1.5 var(--f-display); color: var(--muted) }
+
+footer { padding: 1.6rem var(--gutter) 2rem; border-top: 1px solid var(--line); text-align: center; font-size: .84rem; color: var(--muted) }
+footer p { margin: 0 auto; max-width: 52rem }
+
+@keyframes sube { from { opacity: 0; transform: translateY(6px) } }
+@keyframes crece { from { transform: scaleX(0) } }
+@keyframes traza { to { stroke-dashoffset: 0 } }
+@keyframes punto { from { transform: scale(0); opacity: 0 } }
+@keyframes titila { 50% { opacity: .35 } }
+
+@media (min-width: 821px) and (max-width: 1180px) { .fila { min-height: 2.7rem } }
+@media (max-width: 820px) {
+  .obras { grid-template-columns: minmax(0, 1fr); gap: 2.6rem }
+  .puente { top: 50%; transform: translate(-50%, -50%) rotate(90deg) }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important }
+  .cielo .hilo { stroke-dashoffset: 0 }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="cab">
+    <p class="ante">Universidad de La Laguna · Didáctica de las Ciencias Sociales I</p>
+    <h1>Historia de Canarias</h1>
+    <p class="sub">dos obras del alumnado</p>
+    <p class="lede">Primero, cada estudiante investigó un momento de la historia del archipiélago. Después, convirtió el trabajo de un compañero o compañera en una situación de aprendizaje para el aula de Primaria. Elige por dónde entrar.</p>
+  </header>
+
+  <nav class="obras" aria-label="Las dos obras">
+    <a class="obra mo" href="100-momentos.html">
+      <span class="fase">I · La investigación</span>
+      <div class="fig">
+        <svg class="mapa" viewBox="-16 6 458 196" aria-hidden="true" focusable="false">
+          <path d="M27.9 164.8L29.4 165.0L31.0 166.0L32.3 167.2L32.6 168.5L32.0 170.2L28.5 175.8L28.5 176.3L28.5 177.0L28.5 177.6L28.2 178.1L27.9 178.5L27.2 178.7L26.9 179.0L26.6 179.5L26.3 180.0L25.6 180.7L25.0 181.4L24.7 182.2L24.7 184.6L23.7 185.7L22.5 185.7L20.6 184.7L19.3 183.2L18.4 181.9L17.4 180.8L10.7 180.0L9.2 179.2L7.9 177.8L7.3 174.3L9.8 173.1L13.3 173.4L17.1 174.4L18.4 173.4L21.8 170.0L22.5 169.2L22.5 168.2L22.8 167.7L24.7 166.8L27.9 164.8ZM43.4 68.2L43.4 70.1L44.0 72.4L44.7 74.1L46.6 75.1L46.6 77.0L44.0 80.0L42.8 82.2L43.4 84.3L44.3 87.8L43.7 89.7L43.1 92.4L41.2 95.1L39.3 99.1L37.7 102.5L37.1 104.5L36.4 104.5L35.8 103.5L33.9 102.5L33.2 100.6L32.6 95.6L31.7 94.4L31.0 92.9L29.1 90.3L28.5 88.1L25.3 82.9L25.0 80.4L24.4 78.7L24.1 77.2L22.8 76.2L21.8 75.0L22.2 71.9L24.7 68.7L27.5 66.0L29.8 64.5L31.7 65.7L33.9 65.9L36.1 66.5L39.6 65.0L41.2 65.9L42.8 67.0L43.4 68.2ZM82.7 129.3L87.1 128.2L91.3 129.5L95.1 131.9L99.8 135.4L100.8 137.6L101.4 140.0L100.1 141.8L98.2 143.0L95.7 145.6L93.8 146.9L91.9 147.4L89.7 148.1L87.5 147.6L82.7 144.7L79.8 140.2L79.8 136.6L80.2 132.9L82.7 129.3ZM160.4 135.1L159.4 136.8L157.8 138.5L152.1 144.2L150.8 146.4L149.9 147.6L147.0 146.9L142.3 148.8L140.1 149.6L138.5 150.3L137.2 149.9L136.3 148.6L135.9 147.8L136.3 146.6L135.3 146.2L134.7 145.6L134.4 144.7L134.0 142.9L134.0 142.2L132.8 140.7L129.3 137.3L128.7 135.6L128.0 133.4L126.8 131.9L125.2 130.4L124.5 129.2L123.9 124.6L123.6 123.8L122.3 121.7L121.1 119.6L118.2 116.5L117.6 114.5L119.5 113.1L124.2 110.9L126.1 111.6L128.0 113.1L129.3 113.5L130.2 113.3L132.8 112.6L134.7 111.6L137.5 110.8L139.8 109.9L141.3 110.4L144.8 110.1L146.7 109.9L148.3 108.4L150.5 108.2L151.5 107.7L153.4 107.6L155.3 106.2L159.4 102.5L161.0 101.0L161.6 100.1L161.9 98.6L162.3 97.9L163.8 97.1L164.5 96.6L166.1 95.7L168.0 95.4L169.5 94.7L170.2 92.9L171.8 93.4L180.3 93.5L185.7 91.7L187.6 92.9L187.0 95.6L184.1 97.6L177.8 101.1L176.2 103.8L174.3 105.7L172.1 108.2L169.5 110.3L168.0 110.9L166.7 112.0L165.7 113.8L165.7 115.8L166.4 117.5L166.7 118.5L166.4 119.6L165.4 120.2L164.8 121.2L164.2 123.4L161.3 128.8L160.4 133.2L160.4 135.1ZM251.6 146.9L252.3 147.6L253.9 148.4L254.2 149.1L253.9 150.6L253.2 152.5L252.9 154.2L254.2 155.9L254.2 156.5L253.2 157.0L252.6 157.9L251.6 160.1L252.6 161.4L252.9 163.3L252.9 164.8L251.3 165.5L250.4 166.2L247.5 169.7L246.3 170.9L239.9 172.9L239.0 173.4L238.6 173.4L236.4 176.1L235.2 176.6L234.2 176.1L233.6 175.4L232.6 174.9L228.8 174.8L227.2 174.3L225.7 173.6L220.9 169.5L220.3 168.5L219.9 167.8L218.0 166.8L217.4 166.2L217.1 165.6L214.2 159.9L213.9 157.9L214.2 155.9L213.9 154.7L213.9 153.2L213.9 151.6L214.2 150.5L215.2 149.4L218.7 147.6L220.3 146.4L222.2 144.4L223.8 141.8L223.4 139.5L224.4 138.5L224.7 136.8L224.4 134.7L224.1 133.2L225.0 133.2L226.0 133.2L226.9 133.4L227.6 133.9L228.8 133.6L233.6 135.3L240.2 135.3L245.6 136.6L247.8 135.9L247.5 132.6L250.1 132.0L250.4 132.2L251.0 133.6L251.0 134.2L250.1 134.6L249.4 135.9L249.7 138.6L250.1 142.5L250.4 143.2L250.7 144.4L251.0 145.7L251.6 146.9ZM376.5 76.5L380.0 75.0L383.2 74.6L386.0 75.6L388.6 78.5L389.5 81.9L389.8 86.3L389.2 94.9L388.6 96.9L387.3 100.8L386.7 102.2L386.7 105.4L386.7 106.5L387.0 107.2L387.9 108.6L387.9 109.3L387.6 110.3L386.0 111.8L385.7 112.3L385.7 113.3L385.4 114.1L385.1 115.2L383.8 117.2L382.9 118.9L381.9 122.3L380.0 125.6L377.2 127.1L367.7 128.7L363.9 130.0L360.7 132.0L357.2 132.9L355.6 133.9L352.8 137.1L350.2 140.3L347.7 143.2L343.9 144.9L341.7 144.9L338.2 143.4L336.6 142.9L330.6 143.2L329.6 142.9L329.9 142.5L330.3 141.3L330.6 140.2L330.6 139.8L331.2 139.6L334.1 140.2L336.0 140.0L339.1 138.8L344.2 136.6L350.5 132.4L353.1 129.9L354.3 128.2L355.3 126.5L355.9 124.6L356.6 119.6L357.2 117.9L359.1 114.8L361.3 107.7L362.0 106.5L362.9 105.7L365.4 101.3L367.7 96.4L371.1 91.2L372.1 86.3L373.4 83.2L373.7 79.7L374.3 78.3L375.3 77.3L376.5 76.5ZM419.6 26.0L421.2 25.7L422.8 26.7L425.3 29.0L424.7 31.1L424.4 32.8L423.8 34.1L421.9 35.3L421.5 36.8L421.9 38.2L422.2 39.5L422.5 41.4L422.2 42.0L421.5 43.4L421.2 44.2L421.2 45.1L421.2 46.8L421.2 47.6L420.0 50.0L417.4 52.2L414.6 53.9L410.4 54.9L409.5 55.7L408.9 56.7L407.6 57.2L406.3 57.2L404.4 57.7L402.8 57.9L399.7 58.6L397.5 60.3L395.6 63.0L394.0 66.0L393.6 66.0L392.7 64.7L390.8 64.2L386.7 64.0L386.0 63.5L385.4 62.3L385.1 61.1L385.4 60.6L386.4 60.3L387.0 59.4L387.9 57.9L388.3 56.2L388.6 51.3L388.9 50.0L392.1 45.3L393.6 43.6L394.6 42.6L396.2 41.9L397.8 41.5L400.0 41.4L401.6 40.9L404.4 38.3L406.3 37.3L407.9 36.8L409.2 36.6L413.6 36.6L414.9 36.1L415.8 35.0L417.1 32.6L418.1 29.2L418.7 27.5L419.6 26.0ZM419.3 21.6L420.3 23.3L419.0 25.7L416.8 27.4L414.6 27.0L414.6 26.3L415.8 24.8L416.8 22.6L417.4 21.1L419.3 21.6Z"/>
+          <text x="20" y="200" text-anchor="middle">El Hierro</text>
+          <text x="34" y="57" text-anchor="middle">La Palma</text>
+          <text x="90" y="163" text-anchor="middle">La Gomera</text>
+          <text x="153" y="166" text-anchor="middle">Tenerife</text>
+          <text x="234" y="192" text-anchor="middle">Gran Canaria</text>
+          <text x="360" y="160" text-anchor="middle">Fuerteventura</text>
+          <text x="378" y="50" text-anchor="end">Lanzarote</text>
+          <text x="408" y="21" text-anchor="end">La Graciosa</text>
+        </svg>
+      </div>
+      <span class="fila" aria-hidden="true"><span class="regla"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i><i class="b6"></i><i class="b7"></i><i class="b8"></i><i class="b9"></i><i class="b10"></i></span></span>
+      <h2>100 momentos de Historia de Canarias</h2>
+      <p>Una línea temporal con cien procesos y acontecimientos, desde la formación volcánica de las islas hasta el siglo XXI. Cada momento se abre tal como quedó en la edición.</p>
+      <span class="cifras"><b>90</b> investigados por el alumnado · <b>10</b> por la edición docente · <b>10</b> bloques</span>
+      <span class="entrar"><span>Entrar en la línea temporal</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10h12.5M11 5l5 5-5 5"/></svg></span>
+    </a>
+    <span class="puente" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10h12.5M11 5l5 5-5 5"/></svg></span>
+    <a class="obra sa" href="situaciones-aprendizaje.html">
+      <span class="fase">II · El aula</span>
+      <div class="fig">
+        <svg class="cielo" viewBox="-16 0 458 202" aria-hidden="true" focusable="false">
+          <path class="hilo" d="M32.5 168.2L27.2 178.7L20.1 184.1L9.5 179.3L13.6 173.5L22.6 168.0Z" style="--len:60;--d:0.00s"/>
+          <circle class="c1" cx="32.5" cy="168.2" r="1.9" style="--i:0"/>
+          <circle class="c2" cx="27.2" cy="178.7" r="1.9" style="--i:1"/>
+          <circle class="c3" cx="20.1" cy="184.1" r="1.9" style="--i:2"/>
+          <circle class="c4" cx="9.5" cy="179.3" r="1.9" style="--i:3"/>
+          <circle class="c5" cx="13.6" cy="173.5" r="1.9" style="--i:4"/>
+          <circle class="c6" cx="22.6" cy="168.0" r="1.9" style="--i:5"/>
+          <text x="20" y="200" text-anchor="middle">El Hierro</text>
+          <path class="hilo" d="M44.6 73.8L43.0 83.1L41.9 94.0L37.0 104.5L32.2 95.0L26.5 84.9L21.8 74.7L28.2 65.5L38.9 65.3Z" style="--len:98;--d:0.12s"/>
+          <circle class="c7" cx="44.6" cy="73.8" r="1.9" style="--i:6"/>
+          <circle class="c8" cx="43.0" cy="83.1" r="1.9" style="--i:7"/>
+          <circle class="c9" cx="41.9" cy="94.0" r="1.9" style="--i:8"/>
+          <circle class="c10" cx="37.0" cy="104.5" r="1.9" style="--i:9"/>
+          <circle class="c1" cx="32.2" cy="95.0" r="1.9" style="--i:10"/>
+          <circle class="c2" cx="26.5" cy="84.9" r="1.9" style="--i:11"/>
+          <circle class="c3" cx="21.8" cy="74.7" r="1.9" style="--i:12"/>
+          <circle class="c4" cx="28.2" cy="65.5" r="1.9" style="--i:13"/>
+          <circle class="c5" cx="38.9" cy="65.3" r="1.9" style="--i:14"/>
+          <text x="34" y="57" text-anchor="middle">La Palma</text>
+          <path class="hilo" d="M88.9 128.7L99.7 135.3L96.0 145.3L84.5 145.8L80.0 134.9Z" style="--len:57;--d:0.24s"/>
+          <circle class="c6" cx="88.9" cy="128.7" r="1.9" style="--i:15"/>
+          <circle class="c7" cx="99.7" cy="135.3" r="1.9" style="--i:16"/>
+          <circle class="c8" cx="96.0" cy="145.3" r="1.9" style="--i:17"/>
+          <circle class="c9" cx="84.5" cy="145.8" r="1.9" style="--i:18"/>
+          <circle class="c10" cx="80.0" cy="134.9" r="1.9" style="--i:19"/>
+          <text x="90" y="163" text-anchor="middle">La Gomera</text>
+          <path class="hilo" d="M156.5 139.8L148.1 147.2L136.9 149.5L131.6 139.5L124.8 129.8L120.3 118.8L123.7 111.1L134.8 111.6L146.6 109.9L157.0 104.7L165.2 96.2L175.7 93.4L187.3 92.7L179.2 100.3L171.0 109.1L166.7 118.5L161.2 129.1Z" style="--len:192;--d:0.36s"/>
+          <circle class="c1" cx="156.5" cy="139.8" r="1.9" style="--i:20"/>
+          <circle class="c2" cx="148.1" cy="147.2" r="1.9" style="--i:21"/>
+          <circle class="c3" cx="136.9" cy="149.5" r="1.9" style="--i:22"/>
+          <circle class="c4" cx="131.6" cy="139.5" r="1.9" style="--i:23"/>
+          <circle class="c5" cx="124.8" cy="129.8" r="1.9" style="--i:24"/>
+          <circle class="c6" cx="120.3" cy="118.8" r="1.9" style="--i:25"/>
+          <circle class="c7" cx="123.7" cy="111.1" r="1.9" style="--i:26"/>
+          <circle class="c8" cx="134.8" cy="111.6" r="1.9" style="--i:27"/>
+          <circle class="c9" cx="146.6" cy="109.9" r="1.9" style="--i:28"/>
+          <circle class="c10" cx="157.0" cy="104.7" r="1.9" style="--i:29"/>
+          <circle class="c1" cx="165.2" cy="96.2" r="1.9" style="--i:30"/>
+          <circle class="c2" cx="175.7" cy="93.4" r="1.9" style="--i:31"/>
+          <circle class="c3" cx="187.3" cy="92.7" r="1.9" style="--i:32"/>
+          <circle class="c4" cx="179.2" cy="100.3" r="1.9" style="--i:33"/>
+          <circle class="c5" cx="171.0" cy="109.1" r="1.9" style="--i:34"/>
+          <circle class="c6" cx="166.7" cy="118.5" r="1.9" style="--i:35"/>
+          <circle class="c7" cx="161.2" cy="129.1" r="1.9" style="--i:36"/>
+          <text x="153" y="166" text-anchor="middle">Tenerife</text>
+          <path class="hilo" d="M253.7 151.3L252.3 161.0L247.3 169.9L237.3 175.0L227.0 174.2L218.3 167.0L214.1 156.6L218.7 147.6L224.4 138.5L230.0 134.0L241.3 135.6L249.0 132.2L250.0 141.4Z" style="--len:132;--d:0.48s"/>
+          <circle class="c8" cx="253.7" cy="151.3" r="1.9" style="--i:37"/>
+          <circle class="c9" cx="252.3" cy="161.0" r="1.9" style="--i:38"/>
+          <circle class="c10" cx="247.3" cy="169.9" r="1.9" style="--i:39"/>
+          <circle class="c1" cx="237.3" cy="175.0" r="1.9" style="--i:40"/>
+          <circle class="c2" cx="227.0" cy="174.2" r="1.9" style="--i:41"/>
+          <circle class="c3" cx="218.3" cy="167.0" r="1.9" style="--i:42"/>
+          <circle class="c4" cx="214.1" cy="156.6" r="1.9" style="--i:43"/>
+          <circle class="c5" cx="218.7" cy="147.6" r="1.9" style="--i:44"/>
+          <circle class="c6" cx="224.4" cy="138.5" r="1.9" style="--i:45"/>
+          <circle class="c7" cx="230.0" cy="134.0" r="1.9" style="--i:46"/>
+          <circle class="c8" cx="241.3" cy="135.6" r="1.9" style="--i:47"/>
+          <circle class="c9" cx="249.0" cy="132.2" r="1.9" style="--i:48"/>
+          <circle class="c10" cx="250.0" cy="141.4" r="1.9" style="--i:49"/>
+          <text x="234" y="192" text-anchor="middle">Gran Canaria</text>
+          <path class="hilo" d="M382.0 74.8L389.5 82.0L389.3 93.6L386.7 104.8L385.1 115.2L380.0 125.6L368.9 128.5L358.1 132.7L349.9 140.6L339.9 144.1L330.1 142.0L339.6 138.6L349.7 132.9L356.0 123.6L359.8 112.7L364.8 102.4L370.4 92.2L373.6 81.1Z" style="--len:201;--d:0.60s"/>
+          <circle class="c1" cx="382.0" cy="74.8" r="1.9" style="--i:50"/>
+          <circle class="c2" cx="389.5" cy="82.0" r="1.9" style="--i:51"/>
+          <circle class="c3" cx="389.3" cy="93.6" r="1.9" style="--i:52"/>
+          <circle class="c4" cx="386.7" cy="104.8" r="1.9" style="--i:53"/>
+          <circle class="c5" cx="385.1" cy="115.2" r="1.9" style="--i:54"/>
+          <circle class="c6" cx="380.0" cy="125.6" r="1.9" style="--i:55"/>
+          <circle class="c7" cx="368.9" cy="128.5" r="1.9" style="--i:56"/>
+          <circle class="c8" cx="358.1" cy="132.7" r="1.9" style="--i:57"/>
+          <circle class="c9" cx="349.9" cy="140.6" r="1.9" style="--i:58"/>
+          <circle class="c10" cx="339.9" cy="144.1" r="1.9" style="--i:59"/>
+          <circle class="c1" cx="330.1" cy="142.0" r="1.9" style="--i:60"/>
+          <circle class="c2" cx="339.6" cy="138.6" r="1.9" style="--i:61"/>
+          <circle class="c3" cx="349.7" cy="132.9" r="1.9" style="--i:62"/>
+          <circle class="c4" cx="356.0" cy="123.6" r="1.9" style="--i:63"/>
+          <circle class="c5" cx="359.8" cy="112.7" r="1.9" style="--i:64"/>
+          <circle class="c6" cx="364.8" cy="102.4" r="1.9" style="--i:65"/>
+          <circle class="c7" cx="370.4" cy="92.2" r="1.9" style="--i:66"/>
+          <circle class="c8" cx="373.6" cy="81.1" r="1.9" style="--i:67"/>
+          <text x="360" y="160" text-anchor="middle">Fuerteventura</text>
+          <path class="hilo" d="M424.5 28.3L421.9 38.3L420.3 49.4L410.4 54.9L399.8 58.6L392.5 64.7L386.8 59.7L389.8 48.6L398.4 41.5L408.7 36.7L417.5 31.4Z" style="--len:113;--d:0.72s"/>
+          <circle class="c9" cx="424.5" cy="28.3" r="1.9" style="--i:68"/>
+          <circle class="c10" cx="421.9" cy="38.3" r="1.9" style="--i:69"/>
+          <circle class="c1" cx="420.3" cy="49.4" r="1.9" style="--i:70"/>
+          <circle class="c2" cx="410.4" cy="54.9" r="1.9" style="--i:71"/>
+          <circle class="c3" cx="399.8" cy="58.6" r="1.9" style="--i:72"/>
+          <circle class="c4" cx="392.5" cy="64.7" r="1.9" style="--i:73"/>
+          <circle class="c5" cx="386.8" cy="59.7" r="1.9" style="--i:74"/>
+          <circle class="c6" cx="389.8" cy="48.6" r="1.9" style="--i:75"/>
+          <circle class="c7" cx="398.4" cy="41.5" r="1.9" style="--i:76"/>
+          <circle class="c8" cx="408.7" cy="36.7" r="1.9" style="--i:77"/>
+          <circle class="c9" cx="417.5" cy="31.4" r="1.9" style="--i:78"/>
+          <text x="378" y="50" text-anchor="end">Lanzarote</text>
+          <path class="hilo" d="M419.1 25.6L416.4 23.5Z" style="--len:7;--d:0.84s"/>
+          <circle class="c10" cx="419.1" cy="25.6" r="1.9" style="--i:79"/>
+          <circle class="c1" cx="416.4" cy="23.5" r="1.9" style="--i:80"/>
+          <text x="408" y="21" text-anchor="end">La Graciosa</text>
+          <line class="enlace" x1="150" y1="26" x2="176" y2="12"/>
+          <line class="enlace" x1="176" y1="12" x2="204" y2="22"/>
+          <line class="enlace" x1="204" y1="22" x2="232" y2="6"/>
+          <line class="enlace" x1="232" y1="6" x2="258" y2="18"/>
+          <line class="enlace" x1="258" y1="18" x2="286" y2="8"/>
+          <line class="enlace" x1="286" y1="8" x2="312" y2="24"/>
+          <line class="enlace" x1="312" y1="24" x2="296" y2="40"/>
+          <line class="enlace" x1="296" y1="40" x2="248" y2="36"/>
+          <line class="enlace" x1="248" y1="36" x2="196" y2="40"/>
+          <line class="enlace" x1="196" y1="40" x2="204" y2="22"/>
+          <line class="enlace" x1="248" y1="36" x2="258" y2="18"/>
+          <path class="tema" style="--j:0" d="M150 22.8L150.8 25.2L153.2 26L150.8 26.8L150 29.2L149.2 26.8L146.8 26L149.2 25.2Z"/>
+          <path class="tema" style="--j:1" d="M176 8.8L176.8 11.2L179.2 12L176.8 12.8L176 15.2L175.2 12.8L172.8 12L175.2 11.2Z"/>
+          <path class="tema" style="--j:2" d="M204 18.8L204.8 21.2L207.2 22L204.8 22.8L204 25.2L203.2 22.8L200.8 22L203.2 21.2Z"/>
+          <path class="tema" style="--j:3" d="M232 2.8L232.8 5.2L235.2 6L232.8 6.8L232 9.2L231.2 6.8L228.8 6L231.2 5.2Z"/>
+          <path class="tema" style="--j:4" d="M258 14.8L258.8 17.2L261.2 18L258.8 18.8L258 21.2L257.2 18.8L254.8 18L257.2 17.2Z"/>
+          <path class="tema" style="--j:5" d="M286 4.8L286.8 7.2L289.2 8L286.8 8.8L286 11.2L285.2 8.8L282.8 8L285.2 7.2Z"/>
+          <path class="tema" style="--j:6" d="M312 20.8L312.8 23.2L315.2 24L312.8 24.8L312 27.2L311.2 24.8L308.8 24L311.2 23.2Z"/>
+          <path class="tema" style="--j:7" d="M296 36.8L296.8 39.2L299.2 40L296.8 40.8L296 43.2L295.2 40.8L292.8 40L295.2 39.2Z"/>
+          <path class="tema" style="--j:8" d="M248 32.8L248.8 35.2L251.2 36L248.8 36.8L248 39.2L247.2 36.8L244.8 36L247.2 35.2Z"/>
+          <path class="tema" style="--j:9" d="M196 36.8L196.8 39.2L199.2 40L196.8 40.8L196 43.2L195.2 40.8L192.8 40L195.2 39.2Z"/>
+        </svg>
+      </div>
+      <span class="fila pasos" aria-hidden="true"><span><em>01</em>Pregunta guía</span><span><em>02</em>Secuencia</span><span><em>03</em>Producto final</span><span><em>04</em>Evaluación</span></span>
+      <h2>Situaciones de aprendizaje <em>para enseñar la Historia de Canarias</em></h2>
+      <p>Propuestas didácticas para Educación Primaria. Cada una parte de una pregunta guía, se desarrolla en sesiones de trabajo con fuentes históricas y termina en un producto final.</p>
+      <span class="cifras"><b>81</b> situaciones · <b>10</b> periodos · <b>10</b> temas</span>
+      <span class="entrar"><span>Entrar en la colección</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10h12.5M11 5l5 5-5 5"/></svg></span>
+    </a>
+  </nav>
+  <p class="relacion">Desde cualquiera de las dos se pasa a la otra con la barra de arriba.</p>
+</main>
+<footer>
+  <p>Obras colectivas del alumnado de Didáctica de las Ciencias Sociales I, Grado en Maestro/a en Educación Primaria, <a href="https://www.ull.es">Universidad de La Laguna</a>, curso 2026/2027. Coordinación docente: Juan Pedro Rivero González.</p>
+</footer>
+</body>
+</html>
